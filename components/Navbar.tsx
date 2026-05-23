@@ -9,9 +9,11 @@ import {
   CircleDot,
   Cog,
   Droplets,
+  Menu,
   MapPin,
   Paintbrush,
   Settings,
+  X,
 } from "lucide-react";
 
 const whoWeAreLinks = [
@@ -127,14 +129,25 @@ const serviceHref = (service: string) => {
 
 const Navbar = () => {
   const [activeRepairCategory, setActiveRepairCategory] = useState(repairCategories[0]);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileSection, setMobileSection] = useState<"who" | "what" | "repair" | null>(null);
+
+  const toggleMobileSection = (section: "who" | "what" | "repair") => {
+    setMobileSection((current) => (current === section ? null : section));
+  };
+
+  const closeMobileMenu = () => {
+    setMobileOpen(false);
+    setMobileSection(null);
+  };
 
   return (
     <nav className="w-full font-sans">
       <div className="flex items-center justify-between border-b border-white/5 bg-[#17181C] px-4 py-2 text-[11px] text-[#A7A9B0] md:px-10">
-        <div className="flex items-center gap-2">
-          <MapPin size={14} className="text-[#D61F2C]" />
-          <span>142 Bentworth Rd, London W12 7AH</span>
-          <Link href="#" className="ml-1 text-[#2C4F9E] underline transition-colors hover:text-[#D61F2C]">
+        <div className="flex min-w-0 flex-wrap items-center gap-x-2 gap-y-1">
+          <MapPin size={14} className="shrink-0 text-[#D61F2C]" />
+          <span className="min-w-0 truncate">142 Bentworth Rd, London W12 7AH</span>
+          <Link href="#" className="text-[#2C4F9E] underline transition-colors hover:text-[#D61F2C]">
             (Get Directions)
           </Link>
         </div>
@@ -243,14 +256,96 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <Link href="/appointment" className="flex items-center gap-3 rounded-lg bg-[#D61F2C] px-5 py-2.5 shadow-lg shadow-red-900/20 transition-all duration-300 hover:bg-red-700">
-          <CalendarDays size={28} />
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => setMobileOpen((open) => !open)}
+            className="grid h-11 w-11 place-items-center rounded-md border border-white/10 text-white transition hover:bg-white/10 lg:hidden"
+            aria-expanded={mobileOpen}
+            aria-label="Toggle navigation menu"
+          >
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+
+          <Link href="/appointment" className="flex items-center gap-2 rounded-lg bg-[#D61F2C] px-3 py-2 shadow-lg shadow-red-900/20 transition-all duration-300 hover:bg-red-700 sm:gap-3 sm:px-5 sm:py-2.5">
+          <CalendarDays size={24} className="sm:h-7 sm:w-7" />
           <div className="text-left font-black leading-tight">
             <p className="text-[10px] uppercase tracking-tighter opacity-90">Book</p>
-            <p className="text-sm uppercase tracking-tighter">Appointment</p>
+            <p className="hidden text-sm uppercase tracking-tighter sm:block">Appointment</p>
           </div>
-        </Link>
+          </Link>
+        </div>
       </div>
+
+      {mobileOpen && (
+        <div className="border-t border-white/10 bg-[#0B0B0D] px-4 py-4 text-white shadow-2xl lg:hidden">
+          <div className="space-y-2">
+            <button
+              type="button"
+              onClick={() => toggleMobileSection("who")}
+              className="flex w-full items-center justify-between rounded-md px-2 py-3 text-left text-sm font-black uppercase tracking-widest"
+            >
+              Who We Are <ChevronDown size={18} className={mobileSection === "who" ? "rotate-180 transition" : "transition"} />
+            </button>
+            {mobileSection === "who" && (
+              <div className="grid gap-1 border-l border-white/10 pl-3">
+                {whoWeAreLinks.map((link) => (
+                  <Link key={link.label} href={link.href} onClick={closeMobileMenu} className="rounded-md px-3 py-2 text-sm font-semibold text-white/80 hover:bg-white/10 hover:text-white">
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            <button
+              type="button"
+              onClick={() => toggleMobileSection("what")}
+              className="flex w-full items-center justify-between rounded-md px-2 py-3 text-left text-sm font-black uppercase tracking-widest text-[#D61F2C]"
+            >
+              What We Do <ChevronDown size={18} className={mobileSection === "what" ? "rotate-180 transition" : "transition"} />
+            </button>
+            {mobileSection === "what" && (
+              <div className="grid gap-1 border-l border-white/10 pl-3">
+                {whatWeDoLinks.map((link) => (
+                  <Link key={link.label} href={link.href} onClick={closeMobileMenu} className="rounded-md px-3 py-2 text-sm font-semibold text-white/80 hover:bg-white/10 hover:text-white">
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            <button
+              type="button"
+              onClick={() => toggleMobileSection("repair")}
+              className="flex w-full items-center justify-between rounded-md px-2 py-3 text-left text-sm font-black uppercase tracking-widest"
+            >
+              Repair Services <ChevronDown size={18} className={mobileSection === "repair" ? "rotate-180 transition" : "transition"} />
+            </button>
+            {mobileSection === "repair" && (
+              <div className="grid gap-3 border-l border-white/10 pl-3">
+                {repairCategories.map((category) => (
+                  <div key={category.name}>
+                    <Link href={category.href} onClick={closeMobileMenu} className="block rounded-md px-3 py-2 text-sm font-black text-[#D61F2C] hover:bg-white/10">
+                      {category.title}
+                    </Link>
+                    <div className="grid gap-1 pl-3">
+                      {category.items.map((service) => (
+                        <Link key={service} href={serviceHref(service)} onClick={closeMobileMenu} className="rounded-md px-3 py-1.5 text-sm font-semibold text-white/75 hover:bg-white/10 hover:text-white">
+                          {service}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            <Link href="/contact" onClick={closeMobileMenu} className="block rounded-md px-2 py-3 text-sm font-black uppercase tracking-widest hover:bg-white/10">
+              Contact
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

@@ -67,19 +67,19 @@ const Hero = () => {
             </div>
             <input
               placeholder="ENTER REG"
-              className="w-full px-5 text-xl font-black text-black outline-none placeholder:text-gray-300"
+              className="min-w-0 w-full px-4 text-lg font-black text-black outline-none placeholder:text-gray-300 sm:px-5 sm:text-xl"
             />
-            <button className="bg-[#fb080d] px-8 text-lg font-black italic text-white transition-colors hover:bg-black">
+            <button className="shrink-0 bg-[#fb080d] px-5 text-base font-black italic text-white transition-colors hover:bg-black sm:px-8 sm:text-lg">
               GO
             </button>
           </form>
 
           {/* Bottom Actions */}
-          <div className="mt-8 flex gap-4">
-            <button className="h-14 w-44 rounded-lg bg-white text-base font-black text-[#e41217] transition-all hover:bg-gray-100">
+          <div className="mt-8 flex max-w-[450px] flex-col gap-4 sm:flex-row">
+            <button className="h-14 w-full rounded-lg bg-white text-base font-black text-[#e41217] transition-all hover:bg-gray-100 sm:w-44">
               CALL NOW
             </button>
-            <button className="h-14 w-44 rounded-lg bg-[#e41217] text-base font-black text-white shadow-lg transition-all hover:brightness-110">
+            <button className="h-14 w-full rounded-lg bg-[#e41217] text-base font-black text-white shadow-lg transition-all hover:brightness-110 sm:w-44">
               Quote & Book!
             </button>
           </div>
