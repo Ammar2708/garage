@@ -119,8 +119,16 @@ const repairCategories = [
 ];
 
 const serviceHref = (service: string) => {
+  if (service === "Car Battery Replacement") return "/battery";
+  if (service === "Alternator Repair & Replacement") return "/alter";
+  if (service === "Starter Motor Repair & Replacement") return "/starter";
+  if (service === "Ignition System Repairs") return "/ingnition";
+  if (service === "Car Diagnostics Services") return "/daignostic";
   if (service === "Tyre Fitting & Replacement") return "/w-fitting";
   if (service === "Wheel Alignment & Balancing") return "/alling";
+  if (service === "Alloy Wheel Refurbishment") return "/alloy";
+  if (service === "Tyre Puncture Repair") return "/puncher";
+  if (service === "Wheel Bearing Replacement") return "/bearing";
   if (service === "MOT") return "/mot";
   if (service === "Full Car Servicing") return "/wash";
   if (service === "Interim Car Service") return "/interim";
