@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import {
   BatteryCharging,
@@ -49,6 +50,13 @@ const repairCategories = [
       "Timing Belt Replacement",
       "Turbo Replacement",
       "EV Services",
+      "Car Clutch Replacement",
+      "Shock Absorber Repair",
+      "Car AC Repair",
+      "Auxiliary Belt Replacement",
+      "Automatic Gearbox Repair/Replacement",
+      "Engine Mount Replacement",
+      "Power Steering Replacement",
     ],
   },
   {
@@ -61,7 +69,7 @@ const repairCategories = [
       "Car Scratch Repair",
       "Bumper Repair & Replacement",
       "Car Accident Repair",
-      "Panel Beating & Replacement",
+      "Panel Beating and Replacement",
       "Car Paint Repair",
       "Windscreen Replacement & Repair",
       "Wing Mirror Replacement",
@@ -84,7 +92,7 @@ const repairCategories = [
     name: "Oil Change Services",
     icon: Droplets,
     title: "Fluid & Oil Change Services",
-    href: "/auto",
+    href: "/fluid-change",
     items: [
       "Engine Oil Change",
       "Brake Fluid Change",
@@ -119,6 +127,37 @@ const repairCategories = [
 ];
 
 const serviceHref = (service: string) => {
+  if (service === "Engine Replacement") return "/engine-replacement";
+  if (service === "Brake Pad Replacement") return "/brake-pad-replacement";
+  if (service === "Car Exhaust Repair") return "/exhaust";
+  if (service === "Fuel System Repair") return "/fuel";
+  if (service === "Timing Belt Replacement") return "/timing-belt-replacement";
+  if (service === "Auxiliary Belt Replacement") return "/belt";
+  if (service === "Automatic Gearbox Repair/Replacement") return "/gearbox";
+  if (service === "Engine Mount Replacement") return "/engine mount";
+  if (service === "Power Steering Replacement") return "/power steering";
+  if (service === "Turbo Replacement") return "/turbo";
+  if (service === "EV Services") return "/ev";
+  if (service === "Car Clutch Replacement") return "/clutch";
+  if (service === "Shock Absorber Repair") return "/shock";
+  if (service === "Car AC Repair") return "/ac-repair";
+  if (service === "Car Dent Repair") return "/car-dent-repair";
+  if (service === "Car Scratch Repair") return "/car-scratch-repair";
+  if (service === "Bumper Repair & Replacement") return "/bumper";
+  if (service === "Car Accident Repair") return "/accident";
+  if (service === "Panel Beating and Replacement") return "/panel-beating";
+  if (service === "Car Paint Repair") return "/car-paint-repair";
+  if (service === "Windscreen Replacement & Repair") return "/windscreen";
+  if (service === "Wing Mirror Replacement") return "/wing-mirror-replacement";
+  if (service === "Car Window Tint") return "/car-window-tint";
+  if (service === "Engine Oil Change") return "/oil-change";
+  if (service === "Brake Fluid Change") return "/brake-fluid";
+  if (service === "Engine Coolant Replacement") return "/coolant";
+  if (service === "Transmission Fluid Change") return "/fluid-change";
+  if (service === "Power Steering Fluid Change") return "/steering-fluid";
+  if (service === "Fuel Injector Replacement") return "/injector";
+  if (service === "Engine Oil Leakage Repairs") return "/oil-leakage";
+  if (service === "Car Aircon Regas") return "/aircon-regas";
   if (service === "Car Battery Replacement") return "/battery";
   if (service === "Alternator Repair & Replacement") return "/alter";
   if (service === "Starter Motor Repair & Replacement") return "/starter";
@@ -150,12 +189,17 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full font-sans">
-      <div className="flex items-center justify-between border-b border-white/5 bg-[#17181C] px-4 py-2 text-[11px] text-[#A7A9B0] md:px-10">
-        <div className="flex min-w-0 flex-wrap items-center gap-x-2 gap-y-1">
+    <>
+      <div className="flex flex-col items-start gap-2 border-b border-white/5 bg-[#17181C] px-4 py-2 text-[11px] text-[#A7A9B0] md:flex-row md:items-center md:justify-between md:px-10">
+        <div className="flex w-full min-w-0 flex-wrap items-center gap-x-2 gap-y-1 md:w-auto">
           <MapPin size={14} className="shrink-0 text-[#D61F2C]" />
-          <span className="min-w-0 truncate">142 Bentworth Rd, London W12 7AH</span>
-          <Link href="#" className="text-[#2C4F9E] underline transition-colors hover:text-[#D61F2C]">
+          <span className="min-w-0 flex-1 truncate md:flex-none">32-34 Feltham Rd, Ashford TW15 1DL, United Kingdom</span>
+          <Link
+            href="https://www.google.com/maps/search/?api=1&query=32-34+Feltham+Rd+Ashford+TW15+1DL+United+Kingdom"
+            className="text-[#2C4F9E] underline transition-colors hover:text-[#D61F2C]"
+            target="_blank"
+            rel="noreferrer"
+          >
             (Get Directions)
           </Link>
         </div>
@@ -163,7 +207,7 @@ const Navbar = () => {
         <div className="hidden items-center gap-6 md:flex">
           <div className="flex items-center gap-2">
             <span className="font-medium">Call Now</span>
-            <span className="text-sm font-bold text-[#D61F2C]">+44 20 3337 1831</span>
+            <span className="text-sm font-bold text-[#D61F2C]">+44 1784 240000</span>
           </div>
           <div className="flex gap-4 opacity-80">
             <span className="cursor-pointer transition-colors hover:text-[#2C4F9E]">f</span>
@@ -174,20 +218,20 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="sticky top-0 z-[100] flex items-center justify-between bg-[#0B0B0D] px-4 py-3 text-[#F5F5F5] shadow-2xl md:px-10">
-        <Link href="/" className="group flex flex-col items-start">
-          <div className="relative flex flex-col items-center">
-            <div className="relative mb-1 h-3 w-24">
-              <div className="absolute left-0 top-0 h-full w-full -rotate-2 scale-x-110 rounded-[100%] border-t-2 border-[#D61F2C]" />
-              <div className="absolute bottom-0 left-4 h-full w-[80%] rotate-2 scale-x-110 rounded-[100%] border-b-2 border-[#2C4F9E] opacity-80" />
-            </div>
-            <h1 className="text-xl font-light leading-none tracking-[0.2em] md:text-2xl">
-              TAYLOR<span className="font-bold">MOT</span>
-            </h1>
-          </div>
+      <nav className="sticky top-0 z-[100] w-full font-sans">
+      <div className="flex min-w-0 items-center justify-between gap-3 bg-[#0B0B0D] px-4 py-3 text-[#F5F5F5] shadow-2xl md:px-10">
+        <Link href="/" className="group flex min-w-0 items-center">
+          <Image
+            src="/logo1.png"
+            alt="TAYLORMOT"
+            width={180}
+            height={74}
+            priority
+            className="h-auto w-32 object-contain sm:w-36 md:w-44"
+          />
         </Link>
 
-        <div className="hidden items-center gap-8 text-[13px] font-bold uppercase tracking-widest lg:flex">
+        <div className="hidden items-center gap-6 text-[13px] font-bold uppercase tracking-widest xl:flex 2xl:gap-8">
           <div className="group relative py-4">
             <button className="flex items-center gap-1 transition-colors hover:text-[#D61F2C]">
               Who We Are <ChevronDown size={15} className="opacity-70" />
@@ -201,7 +245,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="group relative py-4 text-[#D61F2C]">
+          <div className="group relative py-4 hover:text-[#D61F2C]">
             <button className="flex items-center gap-1">
               What We Do <ChevronDown size={15} />
             </button>
@@ -218,7 +262,7 @@ const Navbar = () => {
             <button className="flex items-center gap-1 transition-colors hover:text-[#D61F2C]">
               Repair Services <ChevronDown size={15} className="opacity-70 transition group-hover:rotate-180" />
             </button>
-            <div className="absolute -left-64 top-full z-[120] hidden w-[48rem] rounded-b-xl border-t-4 border-[#D61F2C] bg-white text-[#1E2024] shadow-2xl group-hover:grid group-hover:grid-cols-[19rem_1fr]">
+            <div className="absolute left-1/2 top-full z-[120] hidden w-[min(48rem,calc(100vw-2rem))] -translate-x-1/2 rounded-b-xl border-t-4 border-[#D61F2C] bg-white text-[#1E2024] shadow-2xl group-hover:grid group-hover:grid-cols-[18rem_minmax(0,1fr)] 2xl:group-hover:grid-cols-[19rem_minmax(0,1fr)]">
               <div className="border-r border-gray-100 bg-[#F5F5F5] py-3">
                 {repairCategories.map((cat) => {
                   const Icon = cat.icon;
@@ -245,14 +289,14 @@ const Navbar = () => {
                     (view page)
                   </Link>
                 </h3>
-                <div className="mt-3 grid grid-cols-2 gap-x-6">
+                <div className="mt-3 grid min-w-0 grid-cols-2 gap-x-6">
                   {activeRepairCategory.items.map((service) => (
                     <Link key={service} href={serviceHref(service)} className="block border-b border-gray-100 py-2.5 text-[12px] font-semibold text-gray-700 transition hover:text-[#2C4F9E]">
                       {service}
                     </Link>
                   ))}
                 </div>
-                <Link href="/contact" className="mt-5 inline-flex rounded-md bg-[#D61F2C] px-6 py-3 text-[12px] font-black uppercase text-white transition hover:bg-red-700">
+                <Link href="/appointment" className="mt-5 inline-flex rounded-md bg-[#D61F2C] px-6 py-3 text-[12px] font-black uppercase text-white transition hover:bg-red-700">
                   Get A Quote
                 </Link>
               </div>
@@ -264,18 +308,18 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2">
           <button
             type="button"
             onClick={() => setMobileOpen((open) => !open)}
-            className="grid h-11 w-11 place-items-center rounded-md border border-white/10 text-white transition hover:bg-white/10 lg:hidden"
+            className="grid h-11 w-11 place-items-center rounded-md border border-white/10 text-white transition hover:bg-white/10 xl:hidden"
             aria-expanded={mobileOpen}
             aria-label="Toggle navigation menu"
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
 
-          <Link href="/appointment" className="flex items-center gap-2 rounded-lg bg-[#D61F2C] px-3 py-2 shadow-lg shadow-red-900/20 transition-all duration-300 hover:bg-red-700 sm:gap-3 sm:px-5 sm:py-2.5">
+          <Link href="/appointment" className="flex shrink-0 items-center gap-2 rounded-lg bg-[#D61F2C] px-3 py-2 shadow-lg shadow-red-900/20 transition-all duration-300 hover:bg-red-700 sm:gap-3 sm:px-5 sm:py-2.5">
           <CalendarDays size={24} className="sm:h-7 sm:w-7" />
           <div className="text-left font-black leading-tight">
             <p className="text-[10px] uppercase tracking-tighter opacity-90">Book</p>
@@ -286,7 +330,7 @@ const Navbar = () => {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-white/10 bg-[#0B0B0D] px-4 py-4 text-white shadow-2xl lg:hidden">
+        <div className="max-h-[calc(100svh-7.5rem)] overflow-y-auto overscroll-contain border-t border-white/10 bg-[#0B0B0D] px-4 py-4 text-white shadow-2xl xl:hidden">
           <div className="space-y-2">
             <button
               type="button"
@@ -355,6 +399,7 @@ const Navbar = () => {
         </div>
       )}
     </nav>
+    </>
   );
 };
 

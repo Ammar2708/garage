@@ -1,15 +1,26 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
   const quickLinks = [
     { label: "About Us", href: "/about" },
-    { label: "Give Us A Feedback", href: "#" },
-    { label: "Pricing & Coupons", href: "#" },
-    { label: "Sitemap", href: "#" },
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms & Conditions", href: "#" },
-    { label: "Our Blogs", href: "#" },
+    { label: "Give Us A Feedback", href: "/testimonials" },
+    { label: "Pricing & Coupons", href: "/price" },
+    { label: "FAQs", href: "/faqs" },
+    { label: "Sitemap", href: "/sitemap" },
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms & Conditions", href: "/term" },
+    { label: "Our Blogs", href: "/blogs" },
+  ];
+
+  const commonRepairs = [
+    { label: "MOT", href: "/mot" },
+    { label: "Car Servicing", href: "/wash" },
+    { label: "Car Body Repairs", href: "/auto" },
+    { label: "Engine Replacement", href: "/engine-replacement" },
+    { label: "Car Mechanical Repairs", href: "/auto" },
+    { label: "Brake Pads Replacement", href: "/brake-pad-replacement" },
   ];
 
   return (
@@ -18,16 +29,14 @@ const Footer = () => {
         
         {/* Column 1: Logo & Socials */}
         <div className="flex flex-col gap-6">
-          <Link href="/" className="flex flex-col items-start group">
-            <div className="relative flex flex-col items-center">
-              <div className="relative w-20 h-3 mb-1">
-                <div className="absolute top-0 left-0 w-full h-full border-t-2 border-[#D61F2C] rounded-[100%] scale-x-110 -rotate-2"></div>
-                <div className="absolute bottom-0 left-4 w-[80%] h-full border-b-2 border-[#2C4F9E] rounded-[100%] scale-x-110 rotate-2 opacity-80"></div>
-              </div>
-              <h1 className="text-xl font-light tracking-[0.2em] leading-none text-white">
-                TAYLOR<span className="font-bold">MOT</span>
-              </h1>
-            </div>
+          <Link href="/" className="flex items-center group">
+            <Image
+              src="/logo1.png"
+              alt="TAYLORMOT"
+              width={180}
+              height={74}
+              className="h-auto w-36 object-contain"
+            />
           </Link>
           
           <p className="text-[#A7A9B0] text-sm leading-relaxed">
@@ -74,11 +83,11 @@ const Footer = () => {
             <span className="w-8 h-[2px] bg-[#D61F2C] mt-2"></span>
           </h3>
           <ul className="space-y-4 text-sm font-semibold text-[#A7A9B0]">
-            {["MOT", "Car Servicing", "Car Body Repairs", "Engine Replacement", "Car Mechanical Repairs", "Brake Pads Replacement"].map((link) => (
-              <li key={link} className="flex items-center group">
+            {commonRepairs.map((link) => (
+              <li key={link.label} className="flex items-center group">
                 <span className="w-2 h-[2px] bg-[#D61F2C] mr-3 transition-all group-hover:w-4"></span>
-                <Link href="#" className={`hover:text-white transition-colors ${link === 'Car Body Repairs' ? 'text-[#D61F2C]' : ''}`}>
-                  {link}
+                <Link href={link.href} className={`hover:text-white transition-colors `}>
+                  {link.label}
                 </Link>
               </li>
             ))}
@@ -99,7 +108,7 @@ const Footer = () => {
             </div>
             <div>
               <p className="text-sm font-bold text-white">Talk To Repair Support</p>
-              <p className="text-[#A7A9B0] text-sm">+44 20 3337 1831</p>
+              <p className="text-[#A7A9B0] text-sm">+44 1784 240000</p>
             </div>
           </div>
 
@@ -121,7 +130,7 @@ const Footer = () => {
             </div>
             <div>
               <p className="text-sm font-bold text-white">Visit Us</p>
-              <p className="text-[#A7A9B0] text-sm">142 Bentworth Rd, London W12 7AH</p>
+              <p className="text-[#A7A9B0] text-sm">32-34 Feltham Rd, Ashford TW15 1DL, United Kingdom</p>
             </div>
           </div>
         </div>

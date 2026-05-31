@@ -21,7 +21,7 @@ const CarRepairLanding = () => {
   return (
     <div className="font-sans text-gray-900">
       <section className="relative overflow-hidden bg-white py-12 lg:py-16">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:px-8">
           
           <div className="z-10">
             <span className="text-xs font-black uppercase tracking-[0.22em] text-red-600">
@@ -55,10 +55,10 @@ const CarRepairLanding = () => {
                 
             </div>
             
-            <div className="absolute -bottom-8 left-5 right-5 rounded-xl bg-red-600 p-6 text-white shadow-xl md:left-8 md:right-auto md:w-80">
+            <div className="absolute -bottom-8 left-4 right-4 rounded-xl bg-red-600 p-5 text-white shadow-xl sm:left-5 sm:right-5 sm:p-6 md:left-8 md:right-auto md:w-80">
               <h2 className="text-sm font-black uppercase tracking-[0.16em]">Free Quote</h2>
-              <a href="tel:+442033371831" className="mt-2 block text-2xl font-black hover:underline">
-                +44 20 3337 1831
+              <a href="tel:+441784240000" className="mt-2 block text-2xl font-black hover:underline">
+                +44 1784 240000
               </a>
               <p className="mt-3 text-sm leading-6 text-white/85">
                 Quick help for MOT, servicing, diagnostics, and repairs.
@@ -73,7 +73,7 @@ const CarRepairLanding = () => {
 
       <section className="bg-gray-50 px-4 pb-14 pt-20">
         <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
+          <div className="grid grid-cols-1 gap-4 min-[380px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {features.map((feature) => (
               <div key={feature.id} className="group rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm transition-transform hover:-translate-y-1">
                 <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-gray-100 text-zinc-800 transition-colors group-hover:bg-red-600 group-hover:text-white">

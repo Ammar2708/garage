@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SiteAnimations from "@/components/SiteAnimations";
 import "./globals.css";
 
 export const metadata = {
@@ -67,9 +68,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="site-shell">
+        <SiteAnimations />
         <Navbar />
-        {children}
+        <div className="site-page">{children}</div>
         <Footer />
       </body>
     </html>

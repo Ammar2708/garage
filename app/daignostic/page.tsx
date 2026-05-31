@@ -136,7 +136,7 @@ export default function DiagnosticServicePage() {
             ))}
           </div>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link href="tel:+442033371831" className="inline-flex min-w-56 items-center justify-center gap-2 rounded-md border-2 border-white bg-white px-8 py-4 text-sm font-black uppercase text-black transition hover:bg-transparent hover:text-white">
+            <Link href="tel:+441784240000" className="inline-flex min-w-56 items-center justify-center gap-2 rounded-md border-2 border-white bg-white px-8 py-4 text-sm font-black uppercase text-black transition hover:bg-transparent hover:text-white">
               <Phone size={18} />
               Call Now
             </Link>
@@ -183,7 +183,7 @@ export default function DiagnosticServicePage() {
                 </div>
               ))}
             </div>
-            <Link href="tel:+442033371831" className="mt-10 inline-flex items-center gap-4 rounded-md bg-red-600 px-10 py-4 text-lg font-black uppercase text-white transition hover:bg-red-700">
+            <Link href="tel:+441784240000" className="mt-10 inline-flex items-center gap-4 rounded-md bg-red-600 px-10 py-4 text-lg font-black uppercase text-white transition hover:bg-red-700">
               Call Now
               <CheckCircle2 size={24} />
             </Link>
@@ -252,8 +252,8 @@ export default function DiagnosticServicePage() {
               <h3 className="text-3xl font-black leading-tight sm:text-4xl">Get a Full Diagnostic Check</h3>
               <p className="mt-4 text-base font-bold">A focused scan and inspection for the systems causing concern.</p>
             </div>
-            <p className="text-3xl font-black">+44 203 337 1831</p>
-            <Link href="tel:+442033371831" className="inline-flex justify-center rounded-md bg-white px-8 py-4 text-sm font-black uppercase text-black transition hover:bg-neutral-100">
+            <p className="text-3xl font-black">+44 1784 240000</p>
+            <Link href="tel:+441784240000" className="inline-flex justify-center rounded-md bg-white px-8 py-4 text-sm font-black uppercase text-black transition hover:bg-neutral-100">
               Call Now
             </Link>
           </div>
@@ -274,7 +274,7 @@ export default function DiagnosticServicePage() {
         <div className="bg-red-600 px-8 py-12 text-white lg:px-14">
           <h2 className="max-w-5xl text-3xl font-black leading-tight sm:text-4xl">Advanced Diagnostics To Pinpoint Your Problem</h2>
           <p className="mt-5 text-lg font-semibold">Your diagnostic specialist for a healthier ride.</p>
-          <p className="mt-8 text-4xl font-black">+44 20 3337 1831</p>
+          <p className="mt-8 text-4xl font-black">+44 1784 240000</p>
         </div>
       </section>
 
@@ -341,7 +341,7 @@ export default function DiagnosticServicePage() {
         </div>
       </section>
 
-      <Link href="https://wa.me/442033371831" className="fixed bottom-8 right-8 z-40 flex h-20 w-20 items-center justify-center rounded-full bg-green-500 text-white shadow-2xl">
+      <Link href="https://wa.me/441784240000" className="fixed bottom-8 right-8 z-40 flex h-20 w-20 items-center justify-center rounded-full bg-green-500 text-white shadow-2xl">
         <Phone size={34} />
         <span className="sr-only">Whatsapp</span>
       </Link>

@@ -245,7 +245,7 @@ export default function WheelAlignmentPage() {
             Our expert wheel alignment services and balancing help protect tyre wear, steering control, fuel economy, and long-term vehicle safety.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link href="tel:+442033371831" className="inline-flex min-w-56 items-center justify-center gap-2 rounded-md border-2 border-white bg-white px-8 py-4 text-sm font-black uppercase text-black transition hover:bg-transparent hover:text-white">
+            <Link href="tel:+441784240000" className="inline-flex min-w-56 items-center justify-center gap-2 rounded-md border-2 border-white bg-white px-8 py-4 text-sm font-black uppercase text-black transition hover:bg-transparent hover:text-white">
               <Phone size={18} />
               Call Now
             </Link>
@@ -309,7 +309,7 @@ export default function WheelAlignmentPage() {
                     <Phone size={32} />
                   </span>
                   <p className="text-xl font-black text-red-600">Call Now & Get A Free Quote</p>
-                  <p className="mt-6 text-3xl font-black">+44 20 3337 1831</p>
+                  <p className="mt-6 text-3xl font-black">+44 1784 240000</p>
                 </div>
               </div>
             </div>
@@ -499,7 +499,7 @@ export default function WheelAlignmentPage() {
 
       <section className="bg-red-600 px-5 py-12 text-white lg:px-10">
         <div className="mx-auto flex max-w-[1500px] flex-col items-center justify-center gap-10 text-center md:flex-row md:justify-around">
-          <Link href="tel:+442033371831" className="inline-flex items-center gap-4 text-3xl font-black">
+          <Link href="tel:+441784240000" className="inline-flex items-center gap-4 text-3xl font-black">
             <Phone size={42} />
             Call Us
           </Link>
@@ -510,7 +510,7 @@ export default function WheelAlignmentPage() {
         </div>
       </section>
 
-      <Link href="https://wa.me/442033371831" className="fixed bottom-8 right-8 z-40 flex h-20 w-20 items-center justify-center rounded-full bg-green-500 text-white shadow-2xl">
+      <Link href="https://wa.me/441784240000" className="fixed bottom-8 right-8 z-40 flex h-20 w-20 items-center justify-center rounded-full bg-green-500 text-white shadow-2xl">
         <ClipboardList size={34} />
         <span className="sr-only">Whatsapp</span>
       </Link>

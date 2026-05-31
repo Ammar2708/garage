@@ -199,7 +199,7 @@ const AutoPage = () => {
               West London team focused on quality workmanship and practical advice.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link href="tel:+442033371831" className="rounded-xl border-2 border-black bg-white px-8 py-3 text-base font-black transition hover:bg-black hover:text-white">
+              <Link href="tel:+441784240000" className="rounded-xl border-2 border-black bg-white px-8 py-3 text-base font-black transition hover:bg-black hover:text-white">
                 CALL NOW
               </Link>
               <Link href="/contact" className="rounded-xl bg-[#f4070a] px-8 py-3 text-base font-black text-white transition hover:bg-red-700">
@@ -279,8 +279,8 @@ const AutoPage = () => {
               </span>
               <div>
                 <p className="text-lg font-black text-[#f4070a]">Call Our Team</p>
-                <Link href="tel:+442033371831" className="text-2xl font-black">
-                  +44 203 337 1831
+                <Link href="tel:+441784240000" className="text-2xl font-black">
+                  +44 1784 240000
                 </Link>
               </div>
             </div>
@@ -378,7 +378,7 @@ const AutoPage = () => {
                   <Image src={plan.image} alt={plan.name} fill className="object-contain" sizes="360px" />
                 </div>
                 <p className="mt-6 min-h-16 text-base font-medium leading-7">{plan.note}</p>
-                <Link href="tel:+442033371831" className="mt-7 inline-block border border-[#292929] px-8 py-3 text-base font-black transition hover:bg-[#f4070a] hover:text-white">
+                <Link href="tel:+441784240000" className="mt-7 inline-block border border-[#292929] px-8 py-3 text-base font-black transition hover:bg-[#f4070a] hover:text-white">
                   CALL NOW
                 </Link>
               </article>
@@ -589,7 +589,7 @@ const AutoPage = () => {
       </section>
 
       <Link
-        href="https://wa.me/442033371831"
+        href="https://wa.me/441784240000"
         className="fixed bottom-8 right-6 z-[120] flex items-center gap-3"
         aria-label="Contact TAYLORMOT on WhatsApp"
       >

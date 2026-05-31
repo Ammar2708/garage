@@ -10,8 +10,8 @@ import {
 const contactCards = [
   {
     label: "Phone Call",
-    value: "+44 203 337 1831",
-    href: "tel:+442033371831",
+    value: "+44 1784 240000",
+    href: "tel:+441784240000",
     icon: Phone,
   },
   {
@@ -22,8 +22,8 @@ const contactCards = [
   },
   {
     label: "Location",
-    value: "142 Bentworth Rd, London W12 7AH",
-    href: "https://www.google.com/maps/search/?api=1&query=142+Bentworth+Rd+London+W12+7AH",
+    value: "32-34 Feltham Rd, Ashford TW15 1DL, United Kingdom",
+    href: "https://www.google.com/maps/search/?api=1&query=32-34+Feltham+Rd+Ashford+TW15+1DL+United+Kingdom",
     icon: MapPin,
   },
 ];
@@ -213,8 +213,8 @@ const Page = () => {
 
       <section className="relative h-[320px] overflow-hidden border-t border-black/10 lg:h-[420px]">
         <iframe
-          title="142 Bentworth Road London map"
-          src="https://www.google.com/maps?q=142%20Bentworth%20Rd%2C%20London%20W12%207AH&output=embed"
+          title="32-34 Feltham Rd Ashford map"
+          src="https://www.google.com/maps?q=32-34%20Feltham%20Rd%2C%20Ashford%20TW15%201DL%2C%20United%20Kingdom&output=embed"
           loading="lazy"
           className="h-full w-full border-0"
           referrerPolicy="no-referrer-when-downgrade"
@@ -222,7 +222,7 @@ const Page = () => {
       </section>
 
       <a
-        href="https://wa.me/442033371831"
+        href="https://wa.me/441784240000"
         target="_blank"
         rel="noreferrer"
         className="fixed bottom-6 right-6 z-[120] flex items-center gap-3"

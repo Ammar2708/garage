@@ -191,7 +191,7 @@ export default function TyreFittingPage() {
             Do not let flat, worn, or damaged tyres interrupt your journey. TaylorMOT provides practical tyre fitting support, careful inspections, and clear advice before replacement.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link href="tel:+442033371831" className="inline-flex min-w-56 items-center justify-center gap-2 rounded-md border-2 border-white bg-white px-8 py-4 text-sm font-black uppercase text-black transition hover:bg-transparent hover:text-white">
+            <Link href="tel:+441784240000" className="inline-flex min-w-56 items-center justify-center gap-2 rounded-md border-2 border-white bg-white px-8 py-4 text-sm font-black uppercase text-black transition hover:bg-transparent hover:text-white">
               <Phone size={18} />
               Call Now
             </Link>
@@ -289,9 +289,9 @@ export default function TyreFittingPage() {
           <aside>
             <div className="rounded-xl bg-red-600 p-7 text-white">
               <h2 className="text-2xl font-black">Call Now & Get A Free Quote</h2>
-              <Link href="tel:+442033371831" className="mt-6 inline-flex items-center gap-3 rounded-lg bg-white px-6 py-4 text-xl font-black text-black">
+              <Link href="tel:+441784240000" className="mt-6 inline-flex items-center gap-3 rounded-lg bg-white px-6 py-4 text-xl font-black text-black">
                 <Phone size={24} />
-                +44 20 3337 1831
+                +44 1784 240000
               </Link>
             </div>
             <div className="mt-8 bg-neutral-100 p-7">
@@ -462,7 +462,7 @@ export default function TyreFittingPage() {
       <section className="relative overflow-hidden bg-red-600 px-5 py-12 text-white lg:px-10">
         <Image src="/imgi_149_car-repair-pg-cta-section-bg-whole.webp" alt="Garage background" fill className="object-cover opacity-20" sizes="100vw" />
         <div className="relative mx-auto flex max-w-[1700px] flex-col gap-8 md:flex-row md:items-center md:justify-around">
-          <Link href="tel:+442033371831" className="inline-flex items-center justify-center gap-4 text-3xl font-black">
+          <Link href="tel:+441784240000" className="inline-flex items-center justify-center gap-4 text-3xl font-black">
             <Phone size={36} />
             Call Us
           </Link>
@@ -474,7 +474,7 @@ export default function TyreFittingPage() {
       </section>
 
       <Link
-        href="https://wa.me/442033371831"
+        href="https://wa.me/441784240000"
         className="fixed bottom-8 right-8 z-50 flex items-center gap-3 rounded-full bg-white px-4 py-3 text-sm font-semibold text-neutral-700 shadow-xl"
         aria-label="Chat on WhatsApp"
       >

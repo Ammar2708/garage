@@ -29,7 +29,7 @@ const Form = () => {
       <div className="absolute inset-0 bg-[#7b0206]/88" />
       <div className="absolute inset-0 bg-gradient-to-r from-[#8d070a] via-[#790407]/92 to-[#560104]/95" />
 
-      <div className="relative z-10 mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[1fr_0.86fr] lg:px-8 lg:py-16">
+      <div className="relative z-10 mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(360px,0.86fr)] lg:px-8 lg:py-16">
         <div className="flex flex-col justify-center">
           <span className="text-xs font-black uppercase tracking-[0.22em] text-white/80">
             Appointment Booking
@@ -56,7 +56,7 @@ const Form = () => {
           </div>
         </div>
 
-        <form className="rounded-2xl bg-white px-5 py-7 text-black shadow-2xl sm:px-8 lg:px-9 lg:py-9">
+        <form className="min-w-0 rounded-2xl bg-white px-5 py-7 text-black shadow-2xl sm:px-8 lg:px-9 lg:py-9">
           <h2 className="text-center text-2xl font-black uppercase leading-tight tracking-tight sm:text-3xl lg:text-4xl">
             Book an <span className="text-[#f4070b]">Appointment</span>
           </h2>

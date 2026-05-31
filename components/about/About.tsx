@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import {
   ArrowRightCircle,
@@ -150,12 +151,12 @@ const About = () => {
             <h2 className="mt-5 max-w-2xl text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">
               Choose The Service, We Handle The Repair
             </h2>
-            <a
-              href="tel:+442033371831"
+            <Link
+              href="/appointment"
               className="mt-8 inline-flex min-h-12 w-fit items-center gap-3 rounded-full border-2 border-white bg-[#f4070b] px-6 text-base font-black text-white transition-colors hover:bg-black"
             >
               Book Appointment <ArrowRightCircle className="h-6 w-6" />
-            </a>
+            </Link>
           </div>
         </div>
       </section>

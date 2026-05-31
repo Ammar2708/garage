@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { ArrowRightCircle, Check, ChevronLeft, ChevronRight, Scissors, Star } from "lucide-react";
 
@@ -54,7 +55,7 @@ const Comment = () => {
   return (
     <>
       <section className="bg-white px-4 py-10 text-black sm:px-6 lg:px-8 lg:py-14">
-        <div className="mx-auto grid max-w-7xl items-center gap-6 lg:grid-cols-[300px_1fr] lg:gap-10">
+        <div className="mx-auto grid max-w-7xl items-center gap-6 lg:grid-cols-[300px_minmax(0,1fr)] lg:gap-10">
           <div className="relative flex min-h-44 flex-col items-center justify-center text-center">
             <div className="absolute inset-0 flex items-center justify-center opacity-[0.08]">
               <span className="text-[76px] font-black uppercase leading-none text-[#f4070b]">LMS</span>
@@ -89,7 +90,7 @@ const Comment = () => {
               <ChevronLeft className="h-9 w-9" strokeWidth={3.2} />
             </button>
 
-            <article className="relative min-h-52 rounded-2xl bg-[#f5f5f5] px-6 py-7 sm:px-8 lg:px-10">
+            <article className="relative min-h-52 min-w-0 rounded-2xl bg-[#f5f5f5] px-6 py-7 sm:px-8 lg:px-10">
               <Stars />
               <p className="mt-5 text-lg font-medium italic leading-7 text-[#292929] lg:text-xl">
                 {activeReview.text}
@@ -151,46 +152,52 @@ const Comment = () => {
             , and scuffs to larger bodywork repairs, LMS W12 delivers a clean, precise finish.
           </p>
 
-          <a
-            href="tel:+442033371831"
+          <Link
+            href="/appointment"
             className="mt-8 inline-flex min-h-12 items-center justify-center gap-3 rounded-full border-2 border-black px-7 text-base font-black text-black transition-colors hover:bg-black hover:text-white"
           >
             Book Appointment
             <ArrowRightCircle className="h-6 w-6" strokeWidth={2.5} />
-          </a>
+          </Link>
         </div>
       </section>
 
       <section className="border-t-2 border-black bg-white px-4 py-12 text-black sm:px-6 lg:px-8 lg:py-16">
-        <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[0.9fr_1fr] lg:gap-12">
-          <div className="relative min-h-[360px] overflow-hidden rounded-lg bg-gray-100">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1fr)] lg:gap-12">
+          <div className="relative min-h-[620px] overflow-hidden bg-gray-100 sm:min-h-[520px]">
             <Image
               src="/bg1.webp"
               alt="Vehicle wheel being inspected at LMS garage"
               fill
               sizes="(min-width: 1024px) 48vw, 100vw"
-              className="object-cover object-center grayscale"
+              className="object-cover object-left grayscale"
             />
-            <div className="absolute inset-0 bg-black/20" />
+            <div className="absolute inset-0 bg-black/15" />
 
-            <div className="absolute bottom-0 right-0 w-[72%] bg-[#f4070b] px-5 py-6 text-center text-white sm:w-[52%] sm:px-8">
-              <p className="text-base font-black leading-tight">Coupons from</p>
-              <p className="mt-2 text-5xl font-black leading-none tracking-tight">&pound;25 off</p>
-              <p className="mt-2 text-sm font-bold uppercase tracking-wide">selected services</p>
-            </div>
-
-            <div className="absolute right-0 top-0 w-[72%] bg-[#2d2d2d] px-5 py-6 text-center text-white sm:w-[52%] sm:px-8">
-              <div className="absolute left-5 top-[-18px] grid h-11 w-11 place-items-center rounded-full bg-[#f4070b]">
-                <Scissors className="h-6 w-6 text-white" strokeWidth={2.5} />
+            <div className="absolute bottom-0 right-0 w-full text-center text-white sm:w-[58%]">
+              <div className="bg-[#f4070b] px-5 py-8 sm:px-8 sm:py-10">
+                <p className="text-lg font-bold leading-tight">Coupons from</p>
+                <p className="mt-3 text-5xl font-black leading-none tracking-tight sm:text-6xl">
+                  &pound; 25 off
+                </p>
+                <p className="mt-2 text-3xl font-black leading-tight sm:text-4xl">Repairs!</p>
               </div>
-              <h3 className="mt-4 text-2xl font-black leading-tight sm:text-3xl">Current Workshop Offer</h3>
-              <p className="mt-3 text-sm font-medium text-[#f4070b]">Available on services over &pound;250</p>
-              <a
-                href="tel:+442033371831"
-                className="mt-5 inline-flex min-h-11 items-center justify-center border border-[#f4070b] px-5 text-sm font-black text-white transition-colors hover:bg-[#f4070b]"
-              >
-                Claim Offer
-              </a>
+
+              <div className="relative border-t-4 border-dashed border-white bg-[#2d2d2d] px-5 py-10 sm:px-8">
+                <div className="absolute -top-8 left-6 grid h-12 w-12 place-items-center bg-[#2d2d2d]">
+                  <Scissors className="h-10 w-10 text-white" strokeWidth={2.8} />
+                </div>
+                <h3 className="text-3xl font-black leading-tight sm:text-4xl">Our Latest Specials</h3>
+                <p className="mt-4 text-base font-semibold text-[#f4070b] sm:text-lg">
+                  Any Service of &pound;250 or More
+                </p>
+                <a
+                  href="/price"
+                  className="mt-7 inline-flex min-h-14 items-center justify-center border border-[#f4070b] px-8 text-base font-black text-white transition-colors hover:bg-[#f4070b]"
+                >
+                  See All Coupons
+                </a>
+              </div>
             </div>
           </div>
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowRight,
   BriefcaseBusiness,
@@ -88,22 +89,22 @@ const Exp = () => {
             </ul>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="tel:+442033371831"
+              <Link
+                href="/appointment"
                 className="inline-flex min-h-12 items-center justify-center rounded-lg bg-[#f4070b] px-6 text-sm font-black text-white transition-colors hover:bg-black"
               >
                 Book Appointment
-              </a>
-              <a
-                href="#contact"
+              </Link>
+              <Link
+                href="/appointment"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white px-6 text-sm font-black text-black transition-colors hover:border-black"
               >
                 Request Quote <ArrowRight className="h-4 w-4" />
-              </a>
+              </Link>
             </div>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-3 lg:gap-6">
+          <div className="grid min-w-0 gap-5 sm:grid-cols-3 lg:gap-6">
             {insightCards.map((item) => (
               <article
                 key={item.title}
@@ -136,9 +137,9 @@ const Exp = () => {
 
           <div className="mt-10 grid overflow-hidden rounded-2xl bg-black shadow-xl lg:grid-cols-2">
             {repairPanels.map((panel) => (
-              <article
+            <article
                 key={panel.title}
-                className="relative min-h-[420px] overflow-hidden px-6 py-10 text-white sm:px-10 lg:min-h-[500px] lg:px-12 lg:py-14"
+                className="relative min-h-[360px] overflow-hidden px-6 py-10 text-white sm:min-h-[420px] sm:px-10 lg:min-h-[500px] lg:px-12 lg:py-14"
               >
                 <Image
                   src={panel.image}
@@ -148,7 +149,7 @@ const Exp = () => {
                   className={panel.imageClass}
                 />
                 <div className={`absolute inset-0 ${panel.tone}`} />
-                <div className="relative z-10 flex min-h-[340px] max-w-xl flex-col justify-end lg:min-h-[390px]">
+                <div className="relative z-10 flex min-h-[280px] max-w-xl flex-col justify-end sm:min-h-[340px] lg:min-h-[390px]">
                   <div className="mb-5 grid h-12 w-12 place-items-center rounded-full bg-white text-[#f4070b]">
                     {panel.title === "Car Body Repair" ? (
                       <ShieldCheck className="h-6 w-6" strokeWidth={2.5} />
@@ -162,12 +163,12 @@ const Exp = () => {
                   <p className="mt-4 text-base font-medium leading-7 text-white/90 sm:text-lg">
                     {panel.copy}
                   </p>
-                  <a
-                    href="tel:+442033371831"
+                  <Link
+                    href="/appointment"
                     className="mt-7 inline-flex min-h-12 w-fit items-center justify-center rounded-lg bg-white px-6 text-sm font-black text-black transition-colors hover:bg-[#f4070b] hover:text-white"
                   >
                     Book Appointment
-                  </a>
+                  </Link>
                 </div>
               </article>
             ))}

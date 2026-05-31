@@ -132,7 +132,7 @@ export default function WashPage() {
                 Book Now
                 <CalendarCheck size={18} />
               </Link>
-              <Link href="tel:+442033371831" className="inline-flex min-w-64 items-center justify-center gap-2 rounded-md border-2 border-black px-8 py-4 text-base font-black uppercase text-black transition hover:bg-black hover:text-white">
+              <Link href="tel:+441784240000" className="inline-flex min-w-64 items-center justify-center gap-2 rounded-md border-2 border-black px-8 py-4 text-base font-black uppercase text-black transition hover:bg-black hover:text-white">
                 Call Now
                 <Phone size={18} />
               </Link>
@@ -174,7 +174,7 @@ export default function WashPage() {
               <Link href="/appointment" className="rounded-md bg-red-600 px-8 py-3 text-sm font-black uppercase text-white transition hover:bg-red-700">
                 Book Now
               </Link>
-              <Link href="tel:+442033371831" className="rounded-md bg-red-600 px-8 py-3 text-sm font-black uppercase text-white transition hover:bg-red-700">
+              <Link href="tel:+441784240000" className="rounded-md bg-red-600 px-8 py-3 text-sm font-black uppercase text-white transition hover:bg-red-700">
                 Call For Booking
               </Link>
             </div>
@@ -246,9 +246,9 @@ export default function WashPage() {
           <p className="mt-5 max-w-4xl text-base font-semibold leading-8 text-white/90">
             Regular checks help your car stay efficient, comfortable, and prepared for everyday driving around W12 and beyond.
           </p>
-          <Link href="tel:+442033371831" className="mt-8 inline-flex items-center gap-3 text-3xl font-black text-white sm:text-4xl">
+          <Link href="tel:+441784240000" className="mt-8 inline-flex items-center gap-3 text-3xl font-black text-white sm:text-4xl">
             <Phone size={34} />
-            +44 20 3337 1831
+            +44 1784 240000
           </Link>
         </div>
       </section>
@@ -299,7 +299,7 @@ export default function WashPage() {
       </section>
 
       <Link
-        href="https://wa.me/442033371831"
+        href="https://wa.me/441784240000"
         className="fixed bottom-8 right-8 z-50 flex items-center gap-3 rounded-full bg-white px-4 py-3 text-sm font-semibold text-neutral-700 shadow-xl"
         aria-label="Chat on WhatsApp"
       >

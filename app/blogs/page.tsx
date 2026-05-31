@@ -189,7 +189,7 @@ const BlogsPage = () => {
           </p>
           <div className="mt-14 flex flex-wrap gap-5">
             <a
-              href="tel:+442033371831"
+              href="tel:+441784240000"
               className="inline-flex min-h-16 min-w-[210px] items-center justify-center rounded-2xl bg-white px-8 text-xl font-black text-black shadow-lg transition-colors hover:bg-gray-100"
             >
               CALL NOW
@@ -268,7 +268,7 @@ const BlogsPage = () => {
       )}
 
       <a
-        href="https://wa.me/442033371831"
+        href="https://wa.me/441784240000"
         aria-label="Contact TAYLORMOT on WhatsApp"
         className="fixed bottom-7 right-6 z-50 flex items-center gap-3"
       >

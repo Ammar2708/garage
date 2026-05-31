@@ -130,7 +130,7 @@ const TestimonialsPage = () => {
       </section>
 
       <a
-        href="https://wa.me/442033371831"
+        href="https://wa.me/441784240000"
         aria-label="Contact TAYLORMOT on WhatsApp"
         className="fixed bottom-7 right-6 z-50 flex items-center gap-3"
       >

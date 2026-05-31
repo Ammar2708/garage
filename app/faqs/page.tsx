@@ -79,7 +79,7 @@ const quickFacts = [
   {
     icon: Phone,
     title: "Talk To Us",
-    text: "+44 20 3337 1831",
+    text: "+44 1784 240000",
   },
   {
     icon: ShieldCheck,
@@ -197,14 +197,14 @@ const FaqsPage = () => {
               <p className="mt-1 text-xs font-medium text-white/85">Call us before you travel and we will point you in the right direction.</p>
             </div>
           </div>
-          <a href="tel:+442033371831" className="inline-flex min-h-12 items-center justify-center bg-black px-6 text-sm font-black uppercase tracking-wide">
+          <a href="tel:+441784240000" className="inline-flex min-h-12 items-center justify-center bg-black px-6 text-sm font-black uppercase tracking-wide">
             Call Now
           </a>
         </div>
       </section>
 
       <a
-        href="https://wa.me/442033371831"
+        href="https://wa.me/441784240000"
         aria-label="Contact TAYLORMOT on WhatsApp"
         className="fixed bottom-7 right-6 z-50 flex items-center gap-3"
       >

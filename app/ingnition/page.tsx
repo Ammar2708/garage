@@ -168,7 +168,7 @@ export default function IgnitionRepairPage() {
             Restore the spark to your drive with our reliable car ignition repair service. Trust our skilled technicians to handle ignition issues with care.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link href="tel:+442033371831" className="inline-flex min-w-56 items-center justify-center rounded-md border-2 border-white bg-white px-8 py-4 text-sm font-black uppercase text-black transition hover:bg-transparent hover:text-white">
+            <Link href="tel:+441784240000" className="inline-flex min-w-56 items-center justify-center rounded-md border-2 border-white bg-white px-8 py-4 text-sm font-black uppercase text-black transition hover:bg-transparent hover:text-white">
               Call Now
             </Link>
             <Link href="/appointment" className="inline-flex min-w-56 items-center justify-center rounded-md bg-red-600 px-8 py-4 text-sm font-black uppercase text-white transition hover:bg-red-700">
@@ -216,7 +216,7 @@ export default function IgnitionRepairPage() {
       <section className="relative overflow-hidden bg-red-600 px-5 py-14 text-white lg:px-10">
         <Image src="/imgi_150_car-repair-pg-before-footer-cta-bg.webp" alt="Book ignition repair" fill className="object-cover opacity-25" sizes="100vw" />
         <div className="relative mx-auto grid max-w-[1300px] gap-8 text-center md:grid-cols-2">
-          <Link href="tel:+442033371831" className="inline-flex items-center justify-center gap-4 text-4xl font-black">
+          <Link href="tel:+441784240000" className="inline-flex items-center justify-center gap-4 text-4xl font-black">
             <Phone size={44} />
             Call Us
           </Link>
@@ -241,7 +241,7 @@ export default function IgnitionRepairPage() {
                     <Phone size={32} />
                   </span>
                   <p className="text-xl font-black text-red-600">Call Now & Get A Free Quote</p>
-                  <p className="mt-6 text-3xl font-black">+44 20 3337 1831</p>
+                  <p className="mt-6 text-3xl font-black">+44 1784 240000</p>
                 </div>
               </div>
             </div>
@@ -364,7 +364,7 @@ export default function IgnitionRepairPage() {
         </div>
       </section>
 
-      <Link href="https://wa.me/442033371831" className="fixed bottom-8 right-8 z-40 flex h-20 w-20 items-center justify-center rounded-full bg-green-500 text-white shadow-2xl">
+      <Link href="https://wa.me/441784240000" className="fixed bottom-8 right-8 z-40 flex h-20 w-20 items-center justify-center rounded-full bg-green-500 text-white shadow-2xl">
         <Phone size={34} />
         <span className="sr-only">Whatsapp</span>
       </Link>

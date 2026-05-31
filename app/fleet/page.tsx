@@ -127,7 +127,7 @@ export default function FleetPage() {
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Link
-                href="tel:+442033371831"
+                href="tel:+441784240000"
                 className="inline-flex items-center gap-2 rounded-md border-2 border-black px-7 py-3 text-sm font-black uppercase transition hover:bg-black hover:text-white"
               >
                 <Phone size={18} />
@@ -181,7 +181,7 @@ export default function FleetPage() {
               A planned approach helps fleet managers reduce surprise costs, protect drivers, and keep vehicles available when the business needs them.
             </p>
             <Link
-              href="tel:+442033371831"
+              href="tel:+441784240000"
               className="mt-9 inline-flex items-center gap-2 rounded-md bg-red-600 px-7 py-3 text-sm font-black uppercase text-white transition hover:bg-red-700"
             >
               Call Now
@@ -346,7 +346,7 @@ export default function FleetPage() {
       </section>
 
       <Link
-        href="https://wa.me/442033371831"
+        href="https://wa.me/441784240000"
         className="fixed bottom-8 right-8 z-50 flex items-center gap-3 rounded-full bg-white px-4 py-3 text-sm font-semibold text-neutral-700 shadow-xl"
         aria-label="Chat on WhatsApp"
       >

@@ -141,7 +141,7 @@ export default function RecoveryPage() {
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-4">
             <Link
-              href="tel:+442033371831"
+              href="tel:+441784240000"
               className="inline-flex items-center gap-2 rounded-md bg-white px-8 py-3 text-sm font-black uppercase text-black transition hover:bg-neutral-100"
             >
               <Phone size={18} />
@@ -195,7 +195,7 @@ export default function RecoveryPage() {
               <p className="mt-6 max-w-2xl text-base font-medium leading-8 text-white/90">
                 If your vehicle is damaged, stranded, or unsafe to drive, we can arrange transport to a garage or agreed destination.
               </p>
-              <Link href="tel:+442033371831" className="mt-10 inline-flex h-16 w-16 items-center justify-center rounded-full border-4 border-white text-white">
+              <Link href="tel:+441784240000" className="mt-10 inline-flex h-16 w-16 items-center justify-center rounded-full border-4 border-white text-white">
                 <Phone size={28} />
               </Link>
             </div>
@@ -208,7 +208,7 @@ export default function RecoveryPage() {
               <p className="mt-6 max-w-2xl text-base font-medium leading-8 text-white/90">
                 Stuck after a breakdown or collision? We help move the vehicle safely so the repair conversation can start sooner.
               </p>
-              <Link href="tel:+442033371831" className="mt-10 inline-flex h-16 w-16 items-center justify-center rounded-full border-4 border-white text-white">
+              <Link href="tel:+441784240000" className="mt-10 inline-flex h-16 w-16 items-center justify-center rounded-full border-4 border-white text-white">
                 <Phone size={28} />
               </Link>
             </div>
@@ -331,7 +331,7 @@ export default function RecoveryPage() {
               From minor faults to accident recovery, we help move your vehicle safely and point you toward the right repair route.
             </p>
           </div>
-          <Link href="tel:+442033371831" className="inline-flex items-center gap-2 rounded-md bg-red-600 px-8 py-4 text-sm font-black uppercase text-white transition hover:bg-red-700">
+          <Link href="tel:+441784240000" className="inline-flex items-center gap-2 rounded-md bg-red-600 px-8 py-4 text-sm font-black uppercase text-white transition hover:bg-red-700">
             Call Now
             <Phone size={18} />
           </Link>
@@ -413,7 +413,7 @@ export default function RecoveryPage() {
       </section>
 
       <Link
-        href="https://wa.me/442033371831"
+        href="https://wa.me/441784240000"
         className="fixed bottom-8 right-8 z-50 flex items-center gap-3 rounded-full bg-white px-4 py-3 text-sm font-semibold text-neutral-700 shadow-xl"
         aria-label="Chat on WhatsApp"
       >

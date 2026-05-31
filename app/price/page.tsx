@@ -157,7 +157,7 @@ const PricePage = () => {
           </h1>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
-              href="tel:+442033371829"
+              href="tel:+441784240000"
               className="rounded-xl bg-white px-9 py-4 text-lg font-black text-black shadow-lg transition hover:bg-gray-100"
             >
               CALL NOW
@@ -226,7 +226,7 @@ const PricePage = () => {
                 maintenance team.
               </p>
               <Link
-                href="tel:+442033371829"
+                href="tel:+441784240000"
                 className="mt-7 inline-flex items-center gap-3 rounded-[2rem] bg-[#f4070a] px-8 py-4 text-lg font-black text-white transition hover:bg-red-700"
               >
                 CALL NOW <ArrowRightCircle className="h-6 w-6" />
@@ -276,7 +276,7 @@ const PricePage = () => {
                 <div>
                   <p className="text-xl font-bold">Free Support</p>
                   <p className="mt-2 text-3xl font-black text-[#17181c]">
-                    +44 203 337 1829
+                    +44 1784 240000
                   </p>
                 </div>
               </div>
@@ -379,7 +379,7 @@ const PricePage = () => {
               Schedule Your Appointment Today!
             </h3>
             <Link
-              href="tel:+442033371829"
+              href="tel:+441784240000"
               className="mt-6 inline-flex items-center gap-3 rounded-[2rem] bg-[#f4070a] px-8 py-4 text-lg font-black text-white transition hover:bg-red-700"
             >
               CALL NOW <ArrowRightCircle className="h-6 w-6" />
@@ -426,7 +426,7 @@ const PricePage = () => {
             </p>
           </div>
           <Link
-            href="tel:+442033371829"
+            href="tel:+441784240000"
             className="justify-self-start rounded-xl bg-[#f4070a] px-9 py-4 text-2xl font-black text-white transition hover:bg-red-700 lg:justify-self-center"
           >
             CALL NOW
@@ -435,7 +435,7 @@ const PricePage = () => {
       </section>
 
       <Link
-        href="https://wa.me/442033371829"
+        href="https://wa.me/441784240000"
         className="fixed bottom-8 right-6 z-[120] flex items-center gap-3"
         aria-label="Contact TaylorMot on WhatsApp"
       >

@@ -1,13 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  const whatsappUrl = "https://wa.me/442033371831";
+  const whatsappUrl = "https://wa.me/441784240000";
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#050505] font-sans text-white">
+    <section className="relative min-h-[calc(100svh-4rem)] overflow-hidden bg-[#050505] font-sans text-white sm:min-h-screen">
       {/* Background Layer */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -16,7 +17,7 @@ const Hero = () => {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-right-bottom"
+          className="object-cover object-[62%_bottom] sm:object-right-bottom"
         />
         {/* Gradient Overlay to ensure text readability on the left without hiding the full-screen image */}
         <div className="absolute inset-0 bg-[linear-gradient(90deg,#050505_0%,rgba(5,5,5,0.9)_26%,rgba(5,5,5,0.48)_52%,rgba(5,5,5,0.1)_78%,rgba(5,5,5,0.18)_100%)]" />
@@ -24,7 +25,7 @@ const Hero = () => {
       </div>
 
       {/* Main Content Container */}
-      <div className="relative z-10 flex min-h-screen flex-col">
+      <div className="relative z-10 flex min-h-[calc(100svh-4rem)] flex-col sm:min-h-screen">
         
        
         
@@ -34,7 +35,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-1 flex-col justify-center px-6 lg:px-[5vw]"
+          className="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:px-[5vw]"
         >
           <h1 className="mb-2 text-[clamp(40px,5vw,72px)] font-black leading-[1.1] tracking-tight">
             MOT, Repair, <br />
@@ -69,7 +70,7 @@ const Hero = () => {
               placeholder="ENTER REG"
               className="min-w-0 w-full px-4 text-lg font-black text-black outline-none placeholder:text-gray-300 sm:px-5 sm:text-xl"
             />
-            <button className="shrink-0 bg-[#fb080d] px-5 text-base font-black italic text-white transition-colors hover:bg-black sm:px-8 sm:text-lg">
+            <button className="shrink-0 bg-[#fb080d] px-4 text-base font-black italic text-white transition-colors hover:bg-black sm:px-8 sm:text-lg">
               GO
             </button>
           </form>
@@ -79,9 +80,9 @@ const Hero = () => {
             <button className="h-14 w-full rounded-lg bg-white text-base font-black text-[#e41217] transition-all hover:bg-gray-100 sm:w-44">
               CALL NOW
             </button>
-            <button className="h-14 w-full rounded-lg bg-[#e41217] text-base font-black text-white shadow-lg transition-all hover:brightness-110 sm:w-44">
+            <Link href="/appointment" className="inline-flex h-14 w-full items-center justify-center rounded-lg bg-[#e41217] text-base font-black text-white shadow-lg transition-all hover:brightness-110 sm:w-44">
               Quote & Book!
-            </button>
+            </Link>
           </div>
         </motion.div>
       </div>

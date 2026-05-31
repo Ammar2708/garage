@@ -201,7 +201,7 @@ export default function MotPage() {
               <MotCheckForm />
               <div className="mt-5 flex flex-wrap gap-4">
                 <Link
-                  href="tel:+442033371829"
+                  href="tel:+441784240000"
                   className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-black uppercase text-black transition hover:bg-neutral-100"
                 >
                   <Phone size={18} />
@@ -446,7 +446,7 @@ export default function MotPage() {
       </section>
 
       <Link
-        href="https://wa.me/442033371829"
+        href="https://wa.me/441784240000"
         className="fixed bottom-8 right-8 z-50 flex items-center gap-3 rounded-full bg-white px-4 py-3 text-base font-semibold text-neutral-700 shadow-xl"
         aria-label="Chat on WhatsApp"
       >

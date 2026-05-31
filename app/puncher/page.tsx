@@ -184,7 +184,7 @@ export default function TyrePunctureRepairPage() {
             A flat tyre should not derail your day. TaylorMOT inspects punctures, confirms whether the tyre is safe to repair, and gets you moving with clear, practical support.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link href="tel:+442033371831" className="inline-flex min-w-56 items-center justify-center gap-2 rounded-md border-2 border-white bg-white px-8 py-4 text-sm font-black uppercase text-black transition hover:bg-transparent hover:text-white">
+            <Link href="tel:+441784240000" className="inline-flex min-w-56 items-center justify-center gap-2 rounded-md border-2 border-white bg-white px-8 py-4 text-sm font-black uppercase text-black transition hover:bg-transparent hover:text-white">
               <Phone size={18} />
               Call Now
             </Link>
@@ -249,7 +249,7 @@ export default function TyrePunctureRepairPage() {
                     <Phone size={32} />
                   </span>
                   <p className="text-xl font-black text-red-600">Call Now & Get Advice</p>
-                  <p className="mt-6 text-3xl font-black">+44 20 3337 1831</p>
+                  <p className="mt-6 text-3xl font-black">+44 1784 240000</p>
                 </div>
               </div>
             </div>
@@ -393,7 +393,7 @@ export default function TyrePunctureRepairPage() {
             <h2 className="mt-5 max-w-3xl text-4xl font-black leading-tight sm:text-5xl">Need An Urgent Puncture Repair? We Are Here.</h2>
           </div>
           <div className="flex flex-wrap gap-4">
-            <Link href="tel:+442033371831" className="inline-flex items-center justify-center gap-3 rounded-md bg-white px-8 py-4 text-sm font-black uppercase text-black transition hover:bg-neutral-200">
+            <Link href="tel:+441784240000" className="inline-flex items-center justify-center gap-3 rounded-md bg-white px-8 py-4 text-sm font-black uppercase text-black transition hover:bg-neutral-200">
               <Phone size={18} />
               Call Us
             </Link>
@@ -405,7 +405,7 @@ export default function TyrePunctureRepairPage() {
         </div>
       </section>
 
-      <Link href="https://wa.me/442033371831" className="fixed bottom-8 right-8 z-40 flex h-20 w-20 items-center justify-center rounded-full bg-green-500 text-white shadow-2xl">
+      <Link href="https://wa.me/441784240000" className="fixed bottom-8 right-8 z-40 flex h-20 w-20 items-center justify-center rounded-full bg-green-500 text-white shadow-2xl">
         <MapPin size={34} />
         <span className="sr-only">Whatsapp</span>
       </Link>

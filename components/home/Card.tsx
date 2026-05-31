@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
   {
     title: "Mechanical Repairs",
+    href: "/auto",
     image: "/imgc1.webp",
     imageClass: "object-center",
     copy:
@@ -10,6 +12,7 @@ const services = [
   },
   {
     title: "Bodywork & Paint",
+    href: "/car-paint-repair",
     image: "/imgc1.webp",
     imageClass: "object-[58%_center]",
     copy:
@@ -17,6 +20,7 @@ const services = [
   },
   {
     title: "Car Servicing",
+    href: "/wash",
     image: "/bg1.webp",
     imageClass: "object-right-bottom",
     copy:
@@ -24,6 +28,7 @@ const services = [
   },
   {
     title: "MOT Preparation",
+    href: "/mot",
     image: "/imgc1.webp",
     imageClass: "object-[35%_center]",
     copy:
@@ -31,6 +36,7 @@ const services = [
   },
   {
     title: "Electrical Repairs",
+    href: "/battery",
     image: "/imgc1.webp",
     imageClass: "object-[70%_center]",
     copy:
@@ -38,6 +44,7 @@ const services = [
   },
   {
     title: "Engine Diagnostics",
+    href: "/daignostic",
     image: "/bg1.webp",
     imageClass: "object-right-bottom",
     copy:
@@ -69,11 +76,12 @@ const Card = () => {
               }`}
             >
               {column.map((service) => (
-                <article
+                <Link
                   key={service.title}
-                  className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md sm:p-5"
+                  href={service.href}
+                  className="block min-w-0 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md sm:p-5"
                 >
-                  <div className="relative h-44 overflow-hidden rounded-xl bg-gray-100 sm:h-52">
+                  <div className="relative h-44 overflow-hidden rounded-xl bg-gray-100 sm:h-52 md:h-44 lg:h-52">
                     <Image
                       src={service.image}
                       alt={service.title}
@@ -86,7 +94,7 @@ const Card = () => {
                     {service.title}
                   </h3>
                   <p className="mt-3 text-sm leading-6 text-gray-700 lg:text-base">{service.copy}</p>
-                </article>
+                </Link>
               ))}
             </div>
           ))}

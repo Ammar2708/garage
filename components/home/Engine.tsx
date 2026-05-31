@@ -19,7 +19,7 @@ const engineIssues = [
 const Engine = () => {
   return (
     <section className="overflow-hidden bg-black px-4 py-10 text-white sm:px-6 lg:px-8 lg:py-14">
-      <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[1.02fr_0.98fr]">
+      <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)]">
         <div>
           <span className="text-xs font-black uppercase tracking-[0.22em] text-[#f4070b]">
             Engine Repair
@@ -35,7 +35,7 @@ const Engine = () => {
             {engineIssues.map((item) => (
               <article
                 key={item.title}
-                className="rounded-lg border border-white/15 bg-white/[0.03] p-4 text-center transition-colors hover:border-[#f4070b] hover:bg-[#f4070b]/10"
+                className="min-w-0 rounded-lg border border-white/15 bg-white/[0.03] p-4 text-center transition-colors hover:border-[#f4070b] hover:bg-[#f4070b]/10"
               >
                 <div className="mx-auto grid h-10 w-10 place-items-center text-[#f4070b]">
                   {item.icon}
@@ -46,7 +46,7 @@ const Engine = () => {
           </div>
 
           <a
-            href="tel:+442033371831"
+            href="tel:+441784240000"
             className="mt-6 inline-flex min-h-11 items-center justify-center rounded-full bg-[#f4070b] px-7 text-xs font-black uppercase text-white shadow-[0_12px_30px_rgba(244,7,11,0.24)] transition-colors hover:bg-white hover:text-black"
           >
             Start the engine

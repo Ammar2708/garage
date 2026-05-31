@@ -82,13 +82,13 @@ const Award = () => {
           </h2>
           <div className="mt-8 flex flex-wrap gap-5">
             <a
-              href="tel:+442033371831"
+              href="tel:+441784240000"
               className="inline-flex min-h-14 w-56 items-center justify-center rounded-xl bg-white px-7 text-lg font-black text-black transition-colors hover:bg-gray-100"
             >
               CALL NOW
             </a>
             <a
-              href="tel:+442033371831"
+              href="tel:+441784240000"
               className="inline-flex min-h-14 w-56 items-center justify-center rounded-xl bg-[#f4070b] px-7 text-lg font-black text-white transition-colors hover:bg-black"
             >
               BOOK NOW

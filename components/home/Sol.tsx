@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { CarFront, Cog, Play, Wrench } from "lucide-react";
 
@@ -152,12 +153,12 @@ const Sol = () => {
             every repair with the care your vehicle deserves.
           </p>
 
-          <a
-            href="tel:+442033371831"
+          <Link
+            href="/appointment"
             className="mt-7 inline-flex min-h-12 items-center justify-center rounded-lg bg-[#f4070b] px-7 text-sm font-black uppercase text-white transition-colors hover:bg-black"
           >
             Book Appointment
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -192,7 +193,7 @@ const Sol = () => {
             {solutionItems.map((item, index) => (
               <article
                 key={item.title}
-                className={`flex flex-col items-center px-6 text-center ${
+                className={`flex min-w-0 flex-col items-center px-6 text-center ${
                   index > 0 ? "md:border-l md:border-gray-200" : ""
                 }`}
               >
