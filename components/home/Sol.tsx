@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { CarFront, Cog, Play, Wrench } from "lucide-react";
+import { CarFront, Cog, Wrench } from "lucide-react";
 
 const stats = [
   {
@@ -286,13 +286,6 @@ const Sol = () => {
               className="object-cover object-center"
             />
             <div className="absolute inset-0 bg-black/15" />
-            <button
-              type="button"
-              aria-label="Play accreditation video"
-              className="absolute left-1/2 top-1/2 grid h-24 w-24 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-[#2f2f2f] text-white shadow-2xl transition-transform hover:scale-105 sm:h-32 sm:w-32"
-            >
-              <Play className="ml-1 h-10 w-10 sm:h-12 sm:w-12" strokeWidth={2} />
-            </button>
           </div>
         </div>
       </div>

@@ -62,7 +62,7 @@ const Exp = () => {
   return (
     <section className="bg-white text-black">
       <div className="relative overflow-hidden bg-gray-50 px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="mx-auto grid max-w-[90rem] items-center gap-10 lg:grid-cols-[0.82fr_1.18fr]">
           <div className="relative z-10">
             <span className="text-xs font-black uppercase tracking-[0.22em] text-[#f4070b]">
               Service Expertise
@@ -104,16 +104,16 @@ const Exp = () => {
             </div>
           </div>
 
-          <div className="grid min-w-0 gap-5 sm:grid-cols-3 lg:gap-6">
+          <div className="grid min-w-0 gap-5 sm:grid-cols-3 lg:gap-7">
             {insightCards.map((item) => (
               <article
                 key={item.title}
-                className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md"
+                className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md lg:p-7"
               >
                 <div className="grid h-12 w-12 place-items-center rounded-full bg-gray-100 text-[#f4070b]">
                   {item.icon}
                 </div>
-                <h3 className="mt-5 text-xl font-black leading-tight tracking-tight">{item.title}</h3>
+                <h3 className="mt-5 text-lg font-black leading-tight tracking-tight lg:text-[21px]">{item.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-gray-700">{item.copy}</p>
               </article>
             ))}

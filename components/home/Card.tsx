@@ -5,7 +5,7 @@ const services = [
   {
     title: "Mechanical Repairs",
     href: "/auto",
-    image: "/imgc1.webp",
+    image: "/imgi_143_car-mechanical-services.webp",
     imageClass: "object-center",
     copy:
       "Diagnostics, repairs, and replacement work with clear updates from start to finish.",
@@ -13,40 +13,40 @@ const services = [
   {
     title: "Bodywork & Paint",
     href: "/car-paint-repair",
-    image: "/imgc1.webp",
-    imageClass: "object-[58%_center]",
+    image: "/imgi_144_auto-repairpg-car-bodywork-1-1.webp",
+    imageClass: "object-center",
     copy:
       "Panel, paint, and finish support to restore your vehicle with careful attention to detail.",
   },
   {
     title: "Car Servicing",
     href: "/wash",
-    image: "/bg1.webp",
-    imageClass: "object-right-bottom",
+    image: "/imgi_145_aut-repair-car-servicing-1-1.webp",
+    imageClass: "object-center",
     copy:
       "Routine, interim, and major servicing to protect reliability and long-term vehicle health.",
   },
   {
     title: "MOT Preparation",
     href: "/mot",
-    image: "/imgc1.webp",
-    imageClass: "object-[35%_center]",
+    image: "/imgi_137_auto-repair-pg.car-mot-1-1.webp",
+    imageClass: "object-center",
     copy:
       "Pre-checks and essential repairs to help your vehicle meet MOT standards.",
   },
   {
     title: "Electrical Repairs",
     href: "/battery",
-    image: "/imgc1.webp",
-    imageClass: "object-[70%_center]",
+    image: "/imgi_138_auto-repair-pg-car-electrical-services-1.webp",
+    imageClass: "object-center",
     copy:
       "Fault finding for batteries, warning lights, wiring, sensors, and vehicle systems.",
   },
   {
     title: "Engine Diagnostics",
     href: "/daignostic",
-    image: "/bg1.webp",
-    imageClass: "object-right-bottom",
+    image: "/imgi_139_auto-repair-pg-car-diagnostics-1-1.webp",
+    imageClass: "object-center",
     copy:
       "Accurate checks for engine issues, unusual noises, and dashboard warning lights.",
   },
