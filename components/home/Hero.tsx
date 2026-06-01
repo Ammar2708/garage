@@ -8,7 +8,7 @@ const Hero = () => {
   const whatsappUrl = "https://wa.me/441784240000";
 
   return (
-    <section className="relative min-h-[calc(100svh-4rem)] overflow-hidden bg-[#050505] font-sans text-white sm:min-h-screen">
+    <section className="home-hero relative min-h-[calc(100svh-4rem)] overflow-hidden bg-[#050505] font-sans text-white sm:min-h-screen">
       {/* Background Layer */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -35,25 +35,25 @@ const Hero = () => {
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:px-[5vw]"
+          className="flex flex-1 flex-col justify-center px-4 py-10 sm:px-6 sm:py-12 lg:px-[5vw]"
         >
-          <h1 className="mb-2 text-[clamp(40px,5vw,72px)] font-black leading-[1.1] tracking-tight">
-            MOT, Repair, <br />
-            Servicing and Free <br />
+          <h1 className="mb-2 max-w-[12ch] text-[clamp(32px,9.4vw,42px)] font-black leading-[1.08] tracking-tight min-[390px]:max-w-[13ch] sm:max-w-none sm:text-[clamp(40px,5vw,72px)] sm:leading-[1.1]">
+            MOT, Repair, <br className="hidden sm:block" />
+            Servicing and Free <br className="hidden sm:block" />
             <span className="text-[#ff070b]">Instant Quotes.</span>
           </h1>
 
           {/* MOT Due Banner */}
-          <div className="group mt-6 flex w-fit cursor-pointer items-center overflow-hidden rounded-lg bg-[#e41217] p-1 pr-6 transition-all hover:bg-[#c30f14]">
-            <div className="mr-4 flex items-center bg-[#1169af] p-2 px-3 shadow-inner">
-               <svg className="h-8 w-8 text-white" viewBox="0 0 54 54" fill="none">
+          <div className="group mt-6 flex w-fit max-w-full cursor-pointer items-center overflow-hidden rounded-lg bg-[#e41217] p-1 pr-4 transition-all hover:bg-[#c30f14] sm:pr-6">
+            <div className="mr-3 flex shrink-0 items-center bg-[#1169af] p-2 px-3 shadow-inner sm:mr-4">
+               <svg className="h-7 w-7 text-white sm:h-8 sm:w-8" viewBox="0 0 54 54" fill="none">
                   <path d="M27 6 42 32H12L27 6Z" stroke="currentColor" strokeWidth="4" />
                   <path d="m15 14 15 26H0L15 14Z" transform="translate(5 5)" stroke="currentColor" strokeWidth="4" />
                </svg>
             </div>
             <div className="flex flex-col leading-none">
               <span className="text-[10px] font-bold opacity-90">IS YOUR</span>
-              <span className="text-2xl font-black italic">MOT DUE?</span>
+              <span className="text-xl font-black italic sm:text-2xl">MOT DUE?</span>
             </div>
           </div>
 
@@ -70,13 +70,13 @@ const Hero = () => {
               placeholder="ENTER REG"
               className="min-w-0 w-full px-4 text-lg font-black text-black outline-none placeholder:text-gray-300 sm:px-5 sm:text-xl"
             />
-            <button className="shrink-0 bg-[#fb080d] px-4 text-base font-black italic text-white transition-colors hover:bg-black sm:px-8 sm:text-lg">
+            <button className="shrink-0 bg-[#fb080d] px-5 text-base font-black italic text-white transition-colors hover:bg-black sm:px-8 sm:text-lg">
               GO
             </button>
           </form>
 
           {/* Bottom Actions */}
-          <div className="mt-8 flex max-w-[450px] flex-col gap-4 sm:flex-row">
+          <div className="mt-8 flex w-full max-w-[450px] flex-col gap-4 sm:flex-row">
             <button className="h-14 w-full rounded-lg bg-white text-base font-black text-[#e41217] transition-all hover:bg-gray-100 sm:w-44">
               CALL NOW
             </button>

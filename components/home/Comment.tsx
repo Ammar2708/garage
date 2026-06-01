@@ -164,7 +164,7 @@ const Comment = () => {
 
       <section className="border-t-2 border-black bg-white px-4 py-12 text-black sm:px-6 lg:px-8 lg:py-16">
         <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1fr)] lg:gap-12">
-          <div className="relative min-h-[620px] overflow-hidden bg-gray-100 sm:min-h-[520px]">
+          <div className="home-specials-visual relative min-h-[680px] overflow-hidden bg-gray-100 min-[420px]:min-h-[620px] sm:min-h-[520px]">
             <Image
               src="/bg1.webp"
               alt="Vehicle wheel being inspected at LMS garage"
@@ -177,7 +177,7 @@ const Comment = () => {
             <div className="absolute bottom-0 right-0 w-full text-center text-white sm:w-[58%]">
               <div className="bg-[#f4070b] px-5 py-8 sm:px-8 sm:py-10">
                 <p className="text-lg font-bold leading-tight">Coupons from</p>
-                <p className="mt-3 text-5xl font-black leading-none tracking-tight sm:text-6xl">
+                <p className="mt-3 text-4xl font-black leading-none tracking-tight min-[380px]:text-5xl sm:text-6xl">
                   &pound; 25 off
                 </p>
                 <p className="mt-2 text-3xl font-black leading-tight sm:text-4xl">Repairs!</p>
@@ -187,7 +187,7 @@ const Comment = () => {
                 <div className="absolute -top-8 left-6 grid h-12 w-12 place-items-center bg-[#2d2d2d]">
                   <Scissors className="h-10 w-10 text-white" strokeWidth={2.8} />
                 </div>
-                <h3 className="text-3xl font-black leading-tight sm:text-4xl">Our Latest Specials</h3>
+                <h3 className="text-2xl font-black leading-tight min-[380px]:text-3xl sm:text-4xl">Our Latest Specials</h3>
                 <p className="mt-4 text-base font-semibold text-[#f4070b] sm:text-lg">
                   Any Service of &pound;250 or More
                 </p>

@@ -473,7 +473,7 @@ const AutoPage = () => {
             {process.map((step, index) => (
               <article key={step.title}>
                 <div className="relative mx-auto grid h-64 w-64 place-items-center rounded-full bg-[#f5f5f5]">
-                  <span className="absolute left-6 top-0 text-8xl font-black text-black/5">
+                  <span className="absolute inset-0 grid place-items-center text-8xl font-black text-black/5">
                     0{index + 1}
                   </span>
                   <Image src={step.image} alt={step.title} width={170} height={130} className="relative z-10 max-h-36 w-auto object-contain" />

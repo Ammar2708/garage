@@ -139,7 +139,7 @@ const Exp = () => {
             {repairPanels.map((panel) => (
             <article
                 key={panel.title}
-                className="relative min-h-[360px] overflow-hidden px-6 py-10 text-white sm:min-h-[420px] sm:px-10 lg:min-h-[500px] lg:px-12 lg:py-14"
+                className="relative min-h-[340px] overflow-hidden px-5 py-9 text-white sm:min-h-[420px] sm:px-10 lg:min-h-[500px] lg:px-12 lg:py-14"
               >
                 <Image
                   src={panel.image}
@@ -149,7 +149,7 @@ const Exp = () => {
                   className={panel.imageClass}
                 />
                 <div className={`absolute inset-0 ${panel.tone}`} />
-                <div className="relative z-10 flex min-h-[280px] max-w-xl flex-col justify-end sm:min-h-[340px] lg:min-h-[390px]">
+                <div className="relative z-10 flex min-h-[250px] max-w-xl flex-col justify-end sm:min-h-[340px] lg:min-h-[390px]">
                   <div className="mb-5 grid h-12 w-12 place-items-center rounded-full bg-white text-[#f4070b]">
                     {panel.title === "Car Body Repair" ? (
                       <ShieldCheck className="h-6 w-6" strokeWidth={2.5} />
@@ -157,7 +157,7 @@ const Exp = () => {
                       <CalendarCheck2 className="h-6 w-6" strokeWidth={2.5} />
                     )}
                   </div>
-                  <h3 className="text-3xl font-black leading-tight tracking-tight sm:text-4xl">
+                  <h3 className="text-2xl font-black leading-tight tracking-tight sm:text-4xl">
                     {panel.title}
                   </h3>
                   <p className="mt-4 text-base font-medium leading-7 text-white/90 sm:text-lg">

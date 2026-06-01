@@ -72,7 +72,7 @@ const Card = () => {
             <div
               key={columnIndex}
               className={`flex flex-col gap-5 lg:gap-6 ${
-                columnIndex === 1 ? "md:-translate-y-5" : columnIndex === 2 ? "md:translate-y-5" : ""
+                columnIndex === 1 ? "lg:-translate-y-5" : columnIndex === 2 ? "lg:translate-y-5" : ""
               }`}
             >
               {column.map((service) => (

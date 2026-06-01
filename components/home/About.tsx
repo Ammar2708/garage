@@ -41,8 +41,8 @@ const CarRepairLanding = () => {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="relative min-h-[360px] overflow-hidden rounded-2xl bg-[#111] shadow-2xl lg:min-h-[430px]">
+          <div className="relative pb-10 md:pb-0">
+            <div className="relative min-h-[300px] overflow-hidden rounded-2xl bg-[#111] shadow-2xl sm:min-h-[360px] lg:min-h-[430px]">
               <Image
                 src="/imgc1.webp"
                 alt="Mechanic working on a car"
@@ -55,7 +55,7 @@ const CarRepairLanding = () => {
                 
             </div>
             
-            <div className="absolute -bottom-8 left-4 right-4 rounded-xl bg-red-600 p-5 text-white shadow-xl sm:left-5 sm:right-5 sm:p-6 md:left-8 md:right-auto md:w-80">
+            <div className="absolute -bottom-4 left-4 right-4 rounded-xl bg-red-600 p-5 text-white shadow-xl sm:left-5 sm:right-5 sm:p-6 md:-bottom-8 md:left-8 md:right-auto md:w-80">
               <h2 className="text-sm font-black uppercase tracking-[0.16em]">Free Quote</h2>
               <a href="tel:+441784240000" className="mt-2 block text-2xl font-black hover:underline">
                 +44 1784 240000

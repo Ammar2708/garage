@@ -190,10 +190,10 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex flex-col items-start gap-2 border-b border-white/5 bg-[#17181C] px-4 py-2 text-[11px] text-[#A7A9B0] md:flex-row md:items-center md:justify-between md:px-10">
+      <div className="navbar-topbar flex flex-col items-start gap-2 border-b border-white/5 bg-[#17181C] px-3 py-2 text-[11px] text-[#A7A9B0] sm:px-4 md:flex-row md:items-center md:justify-between md:px-10">
         <div className="flex w-full min-w-0 flex-wrap items-center gap-x-2 gap-y-1 md:w-auto">
           <MapPin size={14} className="shrink-0 text-[#D61F2C]" />
-          <span className="min-w-0 flex-1 truncate md:flex-none">32-34 Feltham Rd, Ashford TW15 1DL, United Kingdom</span>
+          <span className="min-w-0 flex-1 leading-5 sm:truncate md:flex-none">32-34 Feltham Rd, Ashford TW15 1DL, United Kingdom</span>
           <Link
             href="https://www.google.com/maps/search/?api=1&query=32-34+Feltham+Rd+Ashford+TW15+1DL+United+Kingdom"
             className="text-[#2C4F9E] underline transition-colors hover:text-[#D61F2C]"
@@ -218,16 +218,16 @@ const Navbar = () => {
         </div>
       </div>
 
-      <nav className="sticky top-0 z-[100] w-full font-sans">
-      <div className="flex min-w-0 items-center justify-between gap-3 bg-[#0B0B0D] px-4 py-3 text-[#F5F5F5] shadow-2xl md:px-10">
-        <Link href="/" className="group flex min-w-0 items-center">
+      <nav className="navbar-main sticky top-0 z-[100] w-full font-sans">
+      <div className="flex min-w-0 items-center justify-between gap-2 bg-[#0B0B0D] px-3 py-2.5 text-[#F5F5F5] shadow-2xl sm:gap-3 sm:px-4 sm:py-3 md:px-10">
+        <Link href="/" className="group flex min-w-0 shrink items-center">
           <Image
             src="/logo1.png"
             alt="TAYLORMOT"
             width={180}
             height={74}
             priority
-            className="h-auto w-32 object-contain sm:w-36 md:w-44"
+            className="h-auto w-28 object-contain min-[380px]:w-32 sm:w-36 md:w-44"
           />
         </Link>
 
@@ -308,19 +308,19 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="flex shrink-0 items-center gap-2">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
           <button
             type="button"
             onClick={() => setMobileOpen((open) => !open)}
-            className="grid h-11 w-11 place-items-center rounded-md border border-white/10 text-white transition hover:bg-white/10 xl:hidden"
+            className="grid h-10 w-10 place-items-center rounded-md border border-white/10 text-white transition hover:bg-white/10 sm:h-11 sm:w-11 xl:hidden"
             aria-expanded={mobileOpen}
             aria-label="Toggle navigation menu"
           >
-            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileOpen ? <X className="h-5 w-5 sm:h-6 sm:w-6" /> : <Menu className="h-5 w-5 sm:h-6 sm:w-6" />}
           </button>
 
-          <Link href="/appointment" className="flex shrink-0 items-center gap-2 rounded-lg bg-[#D61F2C] px-3 py-2 shadow-lg shadow-red-900/20 transition-all duration-300 hover:bg-red-700 sm:gap-3 sm:px-5 sm:py-2.5">
-          <CalendarDays size={24} className="sm:h-7 sm:w-7" />
+          <Link href="/appointment" className="flex shrink-0 items-center gap-1.5 rounded-lg bg-[#D61F2C] px-2.5 py-2 shadow-lg shadow-red-900/20 transition-all duration-300 hover:bg-red-700 min-[380px]:gap-2 min-[380px]:px-3 sm:gap-3 sm:px-5 sm:py-2.5">
+          <CalendarDays className="h-5 w-5 sm:h-7 sm:w-7" />
           <div className="text-left font-black leading-tight">
             <p className="text-[10px] uppercase tracking-tighter opacity-90">Book</p>
             <p className="hidden text-sm uppercase tracking-tighter sm:block">Appointment</p>
@@ -330,17 +330,17 @@ const Navbar = () => {
       </div>
 
       {mobileOpen && (
-        <div className="max-h-[calc(100svh-7.5rem)] overflow-y-auto overscroll-contain border-t border-white/10 bg-[#0B0B0D] px-4 py-4 text-white shadow-2xl xl:hidden">
+        <div className="navbar-mobile-panel max-h-[calc(100svh-4.25rem)] overflow-y-auto overscroll-contain border-t border-white/10 bg-[#0B0B0D] px-3 py-3 text-white shadow-2xl sm:px-4 sm:py-4 xl:hidden">
           <div className="space-y-2">
             <button
               type="button"
               onClick={() => toggleMobileSection("who")}
-              className="flex w-full items-center justify-between rounded-md px-2 py-3 text-left text-sm font-black uppercase tracking-widest"
+              className="flex w-full items-center justify-between rounded-md px-3 py-3 text-left text-sm font-black uppercase tracking-widest hover:bg-white/10"
             >
               Who We Are <ChevronDown size={18} className={mobileSection === "who" ? "rotate-180 transition" : "transition"} />
             </button>
             {mobileSection === "who" && (
-              <div className="grid gap-1 border-l border-white/10 pl-3">
+              <div className="navbar-mobile-section grid gap-1 border-l border-white/10 pl-3">
                 {whoWeAreLinks.map((link) => (
                   <Link key={link.label} href={link.href} onClick={closeMobileMenu} className="rounded-md px-3 py-2 text-sm font-semibold text-white/80 hover:bg-white/10 hover:text-white">
                     {link.label}
@@ -352,12 +352,12 @@ const Navbar = () => {
             <button
               type="button"
               onClick={() => toggleMobileSection("what")}
-              className="flex w-full items-center justify-between rounded-md px-2 py-3 text-left text-sm font-black uppercase tracking-widest text-[#D61F2C]"
+              className="flex w-full items-center justify-between rounded-md px-3 py-3 text-left text-sm font-black uppercase tracking-widest text-[#D61F2C] hover:bg-white/10"
             >
               What We Do <ChevronDown size={18} className={mobileSection === "what" ? "rotate-180 transition" : "transition"} />
             </button>
             {mobileSection === "what" && (
-              <div className="grid gap-1 border-l border-white/10 pl-3">
+              <div className="navbar-mobile-section grid gap-1 border-l border-white/10 pl-3">
                 {whatWeDoLinks.map((link) => (
                   <Link key={link.label} href={link.href} onClick={closeMobileMenu} className="rounded-md px-3 py-2 text-sm font-semibold text-white/80 hover:bg-white/10 hover:text-white">
                     {link.label}
@@ -369,12 +369,12 @@ const Navbar = () => {
             <button
               type="button"
               onClick={() => toggleMobileSection("repair")}
-              className="flex w-full items-center justify-between rounded-md px-2 py-3 text-left text-sm font-black uppercase tracking-widest"
+              className="flex w-full items-center justify-between rounded-md px-3 py-3 text-left text-sm font-black uppercase tracking-widest hover:bg-white/10"
             >
               Repair Services <ChevronDown size={18} className={mobileSection === "repair" ? "rotate-180 transition" : "transition"} />
             </button>
             {mobileSection === "repair" && (
-              <div className="grid gap-3 border-l border-white/10 pl-3">
+              <div className="navbar-mobile-section grid gap-3 border-l border-white/10 pl-3">
                 {repairCategories.map((category) => (
                   <div key={category.name}>
                     <Link href={category.href} onClick={closeMobileMenu} className="block rounded-md px-3 py-2 text-sm font-black text-[#D61F2C] hover:bg-white/10">
@@ -392,7 +392,7 @@ const Navbar = () => {
               </div>
             )}
 
-            <Link href="/contact" onClick={closeMobileMenu} className="block rounded-md px-2 py-3 text-sm font-black uppercase tracking-widest hover:bg-white/10">
+            <Link href="/contact" onClick={closeMobileMenu} className="block rounded-md px-3 py-3 text-sm font-black uppercase tracking-widest hover:bg-white/10">
               Contact
             </Link>
           </div>
