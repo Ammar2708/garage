@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   CalendarDays,
   CarFront,
@@ -72,27 +73,30 @@ const Award = () => {
           fill
           priority={false}
           sizes="100vw"
-          className="object-cover"
+          className="awards-hero-bg object-cover"
         />
-        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.88)_0%,rgba(0,0,0,0.68)_42%,rgba(0,0,0,0.36)_70%,rgba(0,0,0,0.72)_100%)]" />
         <div className="relative z-10 mx-auto flex min-h-[460px] max-w-7xl flex-col justify-center">
-          <p className="text-2xl font-black leading-tight sm:text-3xl">London Motor Sports Ltd</p>
-          <h2 className="mt-7 max-w-5xl text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-            Awards & Recognition: Excellence in Automotive Care 🏆
+          <p className="awards-hero-kicker text-sm font-black uppercase leading-tight tracking-[0.18em] text-white/85 sm:text-base">London Motor Sports Ltd</p>
+          <h2 className="awards-hero-title mt-5 max-w-4xl text-3xl font-black leading-[1.08] tracking-normal sm:text-4xl lg:text-5xl">
+            Awards & Recognition: Excellence in Automotive Care
           </h2>
-          <div className="mt-8 flex flex-wrap gap-5">
+          <p className="awards-hero-copy mt-5 max-w-2xl text-base font-semibold leading-7 text-white/82 sm:text-lg">
+            Trusted workshop standards, clear communication, and dependable repair care for local drivers.
+          </p>
+          <div className="awards-hero-actions mt-8 flex flex-wrap gap-5">
             <a
               href="tel:+441784240000"
-              className="inline-flex min-h-14 w-56 items-center justify-center rounded-xl bg-white px-7 text-lg font-black text-black transition-colors hover:bg-gray-100"
+              className="inline-flex min-h-[52px] w-52 items-center justify-center rounded-lg bg-white px-7 text-base font-black text-black transition-colors hover:bg-gray-100"
             >
               CALL NOW
             </a>
-            <a
-              href="tel:+441784240000"
-              className="inline-flex min-h-14 w-56 items-center justify-center rounded-xl bg-[#f4070b] px-7 text-lg font-black text-white transition-colors hover:bg-black"
+            <Link
+              href="/appointment"
+              className="inline-flex min-h-[52px] w-52 items-center justify-center rounded-lg bg-[#f4070b] px-7 text-base font-black text-white transition-colors hover:bg-black"
             >
               BOOK NOW
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -86,6 +86,10 @@ a {
   touch-action: manipulation;
 }
 
+.site-page a[href^="https://wa.me/"]:not(.global-whatsapp-float) {
+  display: none !important;
+}
+
 .site-page :is(a, button, summary),
 footer a,
 nav a,
@@ -220,6 +224,52 @@ nav {
   from {
     opacity: 0;
     transform: translate3d(0, 16px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.awards-hero-bg {
+  animation: awards-bg-settle 1800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  transform-origin: center;
+}
+
+.awards-hero-kicker,
+.awards-hero-title,
+.awards-hero-copy,
+.awards-hero-actions {
+  animation: awards-content-rise 760ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.awards-hero-title {
+  animation-delay: 90ms;
+}
+
+.awards-hero-copy {
+  animation-delay: 170ms;
+}
+
+.awards-hero-actions {
+  animation-delay: 250ms;
+}
+
+@keyframes awards-bg-settle {
+  from {
+    opacity: 0.7;
+    transform: scale(1.04);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes awards-content-rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
   }
   to {
     opacity: 1;
@@ -650,6 +700,14 @@ nav {
 
   .navbar-mobile-panel,
   .navbar-mobile-section {
+    animation: none !important;
+  }
+
+  .awards-hero-bg,
+  .awards-hero-kicker,
+  .awards-hero-title,
+  .awards-hero-copy,
+  .awards-hero-actions {
     animation: none !important;
   }
 }

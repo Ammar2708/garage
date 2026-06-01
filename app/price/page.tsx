@@ -107,11 +107,11 @@ const CouponCard = ({
 }) => (
   <article className="overflow-hidden bg-[#292929] text-center text-white">
     <div className="relative bg-[#f4070a] px-4 pb-7 pt-6">
-      <p className="text-sm font-semibold sm:text-base">Expires: {coupon.expires}</p>
-      <p className="mt-1 text-4xl font-black leading-none sm:text-5xl lg:text-6xl">
+      <p className="text-xs font-semibold uppercase tracking-wide sm:text-sm">Expires: {coupon.expires}</p>
+      <p className="mt-1 text-3xl font-black leading-none sm:text-4xl lg:text-5xl">
         {coupon.offer}
       </p>
-      <p className="mt-2 text-2xl font-black leading-tight sm:text-3xl">
+      <p className="mt-2 text-xl font-black leading-tight sm:text-2xl">
         {coupon.service}
       </p>
       <div className="absolute -bottom-7 left-0 right-0 flex items-center">
@@ -120,13 +120,13 @@ const CouponCard = ({
       </div>
     </div>
     <div className="px-5 pb-9 pt-14">
-      <h3 className="text-2xl font-black sm:text-3xl">{coupon.title}</h3>
-      <p className="mx-auto mt-4 max-w-md text-lg font-semibold leading-snug text-[#ff1111]">
+      <h3 className="text-xl font-black sm:text-2xl">{coupon.title}</h3>
+      <p className="mx-auto mt-3 max-w-md text-base font-semibold leading-snug text-[#ff1111]">
         {coupon.detail}
       </p>
       <button
         type="button"
-        className={`mt-7 border border-[#f4070a] px-7 py-4 text-base font-black transition-colors ${
+        className={`mt-6 border border-[#f4070a] px-6 py-3 text-sm font-black transition-colors ${
           coupon.active
             ? "bg-[#f4070a] text-black hover:bg-red-700"
             : "text-white hover:bg-[#f4070a]"
@@ -152,19 +152,19 @@ const PricePage = () => {
         />
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 flex min-h-[420px] max-w-7xl flex-col justify-center px-4 py-16 sm:px-8">
-          <h1 className="max-w-6xl text-4xl font-black leading-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-5xl text-3xl font-black leading-tight text-white sm:text-4xl lg:text-5xl">
             Explore Our Pricing & Coupon Offers
           </h1>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               href="tel:+441784240000"
-              className="rounded-xl bg-white px-9 py-4 text-lg font-black text-black shadow-lg transition hover:bg-gray-100"
+              className="rounded-lg bg-white px-7 py-3 text-base font-black text-black shadow-lg transition hover:bg-gray-100"
             >
               CALL NOW
             </Link>
             <Link
               href="/contact"
-              className="rounded-xl bg-[#f4070a] px-9 py-4 text-lg font-black text-white shadow-lg shadow-red-900/30 transition hover:bg-red-700"
+              className="rounded-lg bg-[#f4070a] px-7 py-3 text-base font-black text-white shadow-lg shadow-red-900/30 transition hover:bg-red-700"
             >
               BOOK NOW
             </Link>
@@ -175,10 +175,10 @@ const PricePage = () => {
       <section className="px-4 py-14 sm:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-[1760px] text-center">
-            <h2 className="text-3xl font-black uppercase sm:text-4xl lg:text-5xl">
+            <h2 className="text-2xl font-black uppercase sm:text-3xl lg:text-4xl">
               Car Repair Coupons & Offers
             </h2>
-            <p className="mx-auto mt-6 max-w-5xl text-lg font-medium leading-[1.7] sm:text-xl">
+            <p className="mx-auto mt-5 max-w-4xl text-base font-medium leading-7 text-black/75 sm:text-lg">
               Save on trusted car repair and maintenance services with current
               TAYLORMOT coupon offers. Browse the available discounts below and
               choose the service that fits your vehicle&apos;s needs.
@@ -192,7 +192,7 @@ const PricePage = () => {
           <div className="mt-14 text-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-lg bg-black px-9 py-4 text-2xl font-black text-white transition hover:bg-[#f4070a]"
+              className="inline-flex items-center justify-center rounded-lg bg-black px-7 py-3 text-lg font-black text-white transition hover:bg-[#f4070a]"
             >
               Book Appointment Now
             </Link>
@@ -216,20 +216,20 @@ const PricePage = () => {
           <div className="absolute inset-y-0 right-[22%] hidden w-56 skew-x-[-17deg] bg-black/85 lg:block" />
           <div className="relative z-10 grid min-h-[460px] items-center gap-8 px-4 py-12 sm:px-8 lg:grid-cols-[1fr_1.05fr]">
             <div className="max-w-4xl text-white">
-              <h2 className="text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">
+              <h2 className="text-2xl font-black leading-tight sm:text-3xl lg:text-4xl">
                 Exclusive Money Saving Offers 
                 <br />
                  <span className="text-[#f4070a]">Don&apos;t Miss Out!!</span>
               </h2>
-              <p className="mt-6 max-w-3xl text-xl font-semibold leading-relaxed">
+              <p className="mt-5 max-w-2xl text-base font-semibold leading-7 text-white/85 sm:text-lg">
                 Get practical discounts from a trusted London car repair and
                 maintenance team.
               </p>
               <Link
                 href="tel:+441784240000"
-                className="mt-7 inline-flex items-center gap-3 rounded-[2rem] bg-[#f4070a] px-8 py-4 text-lg font-black text-white transition hover:bg-red-700"
+                className="mt-6 inline-flex items-center gap-3 rounded-[2rem] bg-[#f4070a] px-7 py-3 text-base font-black text-white transition hover:bg-red-700"
               >
-                CALL NOW <ArrowRightCircle className="h-6 w-6" />
+                CALL NOW <ArrowRightCircle className="h-5 w-5" />
               </Link>
             </div>
             <div className="relative min-h-[260px] lg:min-h-[360px]">
@@ -248,21 +248,21 @@ const PricePage = () => {
       <section className="px-4 py-14 sm:px-8 lg:py-18">
         <div className="mx-auto grid max-w-[1770px] gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
           <div>
-            <h2 className="text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">
+            <h2 className="text-2xl font-black leading-tight sm:text-3xl lg:text-4xl">
               Lower Repair Costs
               <br />
               <span className="text-[#f4070a]">Mean Savings</span> For You
             </h2>
-            <p className="mt-7 max-w-4xl text-lg font-medium leading-[1.75] sm:text-xl">
+            <p className="mt-6 max-w-3xl text-base font-medium leading-7 text-black/75 sm:text-lg">
               Our technicians handle repairs with care, clear communication, and
               practical pricing. These offers help reduce service costs while
               keeping quality workmanship at the centre of every job.
             </p>
             <ul className="mt-7 space-y-4">
               {benefits.map((benefit) => (
-                <li key={benefit} className="flex items-center gap-4 text-xl font-medium">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-black bg-[#f4070a] text-white">
-                    <Check className="h-5 w-5" strokeWidth={4} />
+                <li key={benefit} className="flex items-center gap-3 text-base font-medium text-black/80 sm:text-lg">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full border-2 border-black bg-[#f4070a] text-white">
+                    <Check className="h-4 w-4" strokeWidth={4} />
                   </span>
                   {benefit}
                 </li>
@@ -274,17 +274,17 @@ const PricePage = () => {
                   <Headphones className="h-14 w-14" strokeWidth={2} />
                 </span>
                 <div>
-                  <p className="text-xl font-bold">Free Support</p>
-                  <p className="mt-2 text-3xl font-black text-[#17181c]">
+                  <p className="text-base font-bold sm:text-lg">Free Support</p>
+                  <p className="mt-2 text-2xl font-black text-[#17181c]">
                     +44 1784 240000
                   </p>
                 </div>
               </div>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-4 rounded-[2rem] bg-[#f4070a] px-10 py-5 text-xl font-black text-white transition hover:bg-red-700"
+                className="inline-flex items-center gap-3 rounded-[2rem] bg-[#f4070a] px-8 py-4 text-base font-black text-white transition hover:bg-red-700"
               >
-                Get Quote <ArrowRightCircle className="h-7 w-7" />
+                Get Quote <ArrowRightCircle className="h-5 w-5" />
               </Link>
             </div>
           </div>
@@ -302,34 +302,34 @@ const PricePage = () => {
 
       <section className="px-4 py-16 sm:px-8">
         <div className="mx-auto max-w-[1710px] text-center">
-          <h2 className="text-3xl font-black text-[#292929] sm:text-4xl lg:text-5xl">
+          <h2 className="text-2xl font-black text-[#292929] sm:text-3xl lg:text-4xl">
             Explore Our Price Ranges For Featured Services
           </h2>
-          <p className="mx-auto mt-6 max-w-5xl text-lg font-medium leading-[1.7] sm:text-xl">
+          <p className="mx-auto mt-5 max-w-4xl text-base font-medium leading-7 text-black/75 sm:text-lg">
             Review common repair and maintenance price ranges before booking.
             Final costs may vary after inspection, but this table gives you a
             clear starting point.
           </p>
           <div className="mt-8 overflow-hidden rounded-t-lg text-left">
-            <div className="grid grid-cols-1 gap-5 bg-black px-6 py-6 text-lg font-black text-white sm:grid-cols-3 sm:text-xl">
+            <div className="grid grid-cols-1 gap-4 bg-black px-6 py-5 text-base font-black text-white sm:grid-cols-3 sm:text-lg">
               <div className="flex items-center gap-5">
-                <Home className="h-8 w-8" />
+                <Home className="h-6 w-6" />
                 Major Car Repairs
               </div>
               <div className="flex items-center gap-5">
-                <CalendarClock className="h-8 w-8" />
+                <CalendarClock className="h-6 w-6" />
                 Time Required
               </div>
               <div className="flex items-center gap-5">
-                <Wrench className="h-8 w-8" />
+                <Wrench className="h-6 w-6" />
                 Cost Range
               </div>
             </div>
-            <div className="text-lg font-medium sm:text-xl">
+            <div className="text-base font-medium sm:text-lg">
               {prices.map(([service, time, cost], index) => (
                 <div
                   key={service}
-                  className={`grid grid-cols-1 gap-4 px-6 py-5 sm:grid-cols-3 ${
+                  className={`grid grid-cols-1 gap-4 px-6 py-4 sm:grid-cols-3 ${
                     index % 2 === 1 ? "bg-[#f0f0f0]" : "bg-white"
                   }`}
                 >
@@ -360,10 +360,10 @@ const PricePage = () => {
               <span className="h-16 w-4 skew-x-[-12deg] bg-[#d5a61d]" />
               <span className="h-16 w-4 skew-x-[-12deg] bg-[#f4070a]" />
             </div>
-            <h2 className="text-3xl font-black leading-tight sm:text-4xl">
+            <h2 className="text-2xl font-black leading-tight sm:text-3xl">
               Go The Extra Mile With TAYLORMOT Savings
             </h2>
-            <div className="mt-7 space-y-6 text-lg font-medium leading-[1.75] text-black sm:text-xl">
+            <div className="mt-6 space-y-5 text-base font-medium leading-7 text-black/75 sm:text-lg">
               <p>
                 When your vehicle needs attention, our coupon section gives you
                 quick access to current savings on selected repairs and services.
@@ -375,14 +375,14 @@ const PricePage = () => {
                 work begins.
               </p>
             </div>
-            <h3 className="mt-8 text-3xl font-black leading-tight text-[#f4070a]">
+            <h3 className="mt-7 text-2xl font-black leading-tight text-[#f4070a]">
               Schedule Your Appointment Today!
             </h3>
             <Link
               href="tel:+441784240000"
-              className="mt-6 inline-flex items-center gap-3 rounded-[2rem] bg-[#f4070a] px-8 py-4 text-lg font-black text-white transition hover:bg-red-700"
+              className="mt-6 inline-flex items-center gap-3 rounded-[2rem] bg-[#f4070a] px-7 py-3 text-base font-black text-white transition hover:bg-red-700"
             >
-              CALL NOW <ArrowRightCircle className="h-6 w-6" />
+              CALL NOW <ArrowRightCircle className="h-5 w-5" />
             </Link>
           </div>
         </div>
@@ -390,13 +390,13 @@ const PricePage = () => {
 
       <section className="px-4 py-16 sm:px-8">
         <div className="mx-auto max-w-[1890px]">
-          <h2 className="text-3xl font-black text-[#17181c] sm:text-4xl">
+          <h2 className="text-2xl font-black text-[#17181c] sm:text-3xl">
             Disclaimer Terms & Conditions For Coupons
           </h2>
-          <p className="mt-6 text-lg font-black text-[#17181c]">
+          <p className="mt-5 text-base font-black text-[#17181c]">
             Please read the coupon terms before booking.
           </p>
-          <div className="mt-8 space-y-5 pl-0 text-lg font-medium leading-relaxed sm:pl-10 sm:text-xl">
+          <div className="mt-7 space-y-4 pl-0 text-base font-medium leading-7 text-black/75 sm:pl-10 sm:text-lg">
             {terms.map((term) => (
               <p key={term}>{term}</p>
             ))}
@@ -415,19 +415,19 @@ const PricePage = () => {
         <div className="absolute inset-0 bg-black/45" />
         <div className="relative z-10 grid min-h-[440px] max-w-[1700px] items-center gap-10 px-4 py-16 sm:px-8 lg:grid-cols-[1fr_0.35fr]">
           <div>
-            <h2 className="text-3xl font-black leading-tight text-white sm:text-4xl">
+            <h2 className="text-2xl font-black leading-tight text-white sm:text-3xl">
               Explore Our Pricing And Coupons & Get
               <br />
               Best Deals On <span className="text-[#f4070a]">Car Mechanical Repairs</span>
             </h2>
-            <p className="mt-7 max-w-4xl text-xl font-medium leading-relaxed text-white">
+            <p className="mt-6 max-w-3xl text-base font-medium leading-7 text-white/85 sm:text-lg">
               Book reliable repairs with clear pricing, practical discounts, and
               service support from a team focused on lasting results.
             </p>
           </div>
           <Link
             href="tel:+441784240000"
-            className="justify-self-start rounded-xl bg-[#f4070a] px-9 py-4 text-2xl font-black text-white transition hover:bg-red-700 lg:justify-self-center"
+            className="justify-self-start rounded-lg bg-[#f4070a] px-7 py-3 text-lg font-black text-white transition hover:bg-red-700 lg:justify-self-center"
           >
             CALL NOW
           </Link>

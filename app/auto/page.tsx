@@ -14,15 +14,15 @@ import {
 } from "lucide-react";
 
 const services = [
-  { title: "MOT Preparation", image: "/imgi_137_auto-repair-pg.car-mot-1-1.webp" },
-  { title: "Electrical Fault Repairs", image: "/imgi_138_auto-repair-pg-car-electrical-services-1.webp" },
-  { title: "Vehicle Diagnostics", image: "/imgi_139_auto-repair-pg-car-diagnostics-1-1.webp" },
-  { title: "Oil & Fluid Service", image: "/imgi_140_aut-repair-car-oil-change-1-1.webp" },
-  { title: "Tyres & Wheel Care", image: "/imgi_141_aut-repair-car-tyre-services-1-1.webp" },
-  { title: "Fleet Support", image: "/imgi_142_aut-repair-car-modification-1.webp" },
-  { title: "Mechanical Repairs", image: "/imgi_143_car-mechanical-services.webp" },
-  { title: "Bodywork Repairs", image: "/imgi_144_auto-repairpg-car-bodywork-1-1.webp" },
-  { title: "Full Car Servicing", image: "/imgi_145_aut-repair-car-servicing-1-1.webp" },
+  { title: "MOT Preparation", image: "/imgi_137_auto-repair-pg.car-mot-1-1.webp", href: "/mot" },
+  { title: "Electrical Fault Repairs", image: "/imgi_138_auto-repair-pg-car-electrical-services-1.webp", href: "/battery" },
+  { title: "Vehicle Diagnostics", image: "/imgi_139_auto-repair-pg-car-diagnostics-1-1.webp", href: "/daignostic" },
+  { title: "Oil & Fluid Service", image: "/imgi_140_aut-repair-car-oil-change-1-1.webp", href: "/oil-change" },
+  { title: "Tyres & Wheel Care", image: "/imgi_141_aut-repair-car-tyre-services-1-1.webp", href: "/w-fitting" },
+  { title: "Fleet Support", image: "/imgi_142_aut-repair-car-modification-1.webp", href: "/fleet" },
+  { title: "Mechanical Repairs", image: "/imgi_143_car-mechanical-services.webp", href: "/engine-replacement" },
+  { title: "Bodywork Repairs", image: "/imgi_144_auto-repairpg-car-bodywork-1-1.webp", href: "/panel-beating" },
+  { title: "Full Car Servicing", image: "/imgi_145_aut-repair-car-servicing-1-1.webp", href: "/interim" },
 ];
 
 const repairFeatures = [
@@ -305,13 +305,17 @@ const AutoPage = () => {
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
-              <article key={service.title} className="group relative min-h-[260px] overflow-hidden border border-white/20">
+              <Link
+                key={service.title}
+                href={service.href}
+                className="group relative min-h-[260px] overflow-hidden border border-white/20"
+              >
                 <Image src={service.image} alt={service.title} fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(min-width: 1024px) 33vw, 100vw" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/10" />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#f4070a]/75 to-transparent p-7">
                   <h3 className="text-2xl font-black">{service.title}</h3>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>

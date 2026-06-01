@@ -53,9 +53,9 @@ const galleryItems = [
 
 const comparisonItems = [
   {
-    before: "/img4A.png",
-    after: "/img5A.png",
-    alt: "Before and after car repair comparison",
+    before: "/car1.webp",
+    after: "/car2.webp",
+    alt: "Blue car and grey car repair before and after comparison",
   },
   {
     before: "/car3.webp",

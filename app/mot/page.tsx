@@ -46,14 +46,17 @@ const checklistImages = [
   {
     title: "Tyres & Wheels",
     image: "/imgi_5_2e5bda43f9-1.webp",
+    href: "/w-fitting",
   },
   {
     title: "Brakes & Suspension",
     image: "/imgi_6_2148327525-1.webp",
+    href: "/brake-pad-replacement",
   },
   {
     title: "Body & Visibility",
     image: "/imgi_7_2149342629-1.webp",
+    href: "/windscreen",
   },
 ];
 
@@ -61,66 +64,78 @@ const testAreas = [
   {
     title: "Axles, Wheels & Tyres",
     image: "/imgi_5_2e5bda43f9-1.webp",
+    href: "/w-fitting",
     text: "We check tyre tread, sidewall condition, wheel security, and visible damage that could affect road safety.",
   },
   {
     title: "Car Brakes",
     image: "/imgi_6_2148327525-1.webp",
+    href: "/brake-pad-replacement",
     text: "Brake pads, discs, cables, and stopping performance are reviewed so faults can be corrected before the MOT.",
     red: true,
   },
   {
     title: "Car Bodywork",
     image: "/imgi_7_2149342629-1.webp",
+    href: "/panel-beating",
     text: "Sharp edges, corrosion, insecure panels, and visible structural issues are checked with practical repair advice.",
   },
   {
     title: "DPF",
     image: "/imgi_8_4263-1.webp",
+    href: "/exhaust",
     text: "Diesel particulate filter concerns can affect emissions. We inspect warning signs and advise the right repair route.",
     red: true,
   },
   {
     title: "Exhaust & Emissions",
     image: "/imgi_9_11830-1.webp",
+    href: "/exhaust",
     text: "The exhaust system is checked for leaks, noise, emissions concerns, and secure mounting points.",
   },
   {
     title: "Lights & Battery",
     image: "/imgi_10_1134-1.webp",
+    href: "/battery",
     text: "Headlights, brake lights, indicators, number plate lights, and battery health are checked before testing.",
     red: true,
   },
   {
     title: "Windows & Mirrors",
     image: "/imgi_11_7658-1.webp",
+    href: "/windscreen",
     text: "We look for visibility issues, damaged glass, loose mirrors, and worn wipers that can lead to a fail.",
   },
   {
     title: "Seat & Seat Belts",
     image: "/imgi_12_698-1.webp",
+    href: "/appointment",
     text: "Seats must be secure and seat belts must latch, retract, and hold correctly for safe road use.",
     red: true,
   },
   {
     title: "Fuel System",
     image: "/imgi_13_18532-1.webp",
+    href: "/fuel",
     text: "Fuel caps, lines, leaks, and visible system condition are checked to reduce safety and emissions risks.",
   },
   {
     title: "Horn Check",
     image: "/imgi_14_10048254a-2.webp",
+    href: "/daignostic",
     text: "The horn should work clearly and reliably, with no novelty tones or intermittent faults.",
     red: true,
   },
   {
     title: "Air Filter",
     image: "/imgi_15_Cabin-Air-Filter-1.webp",
+    href: "/interim",
     text: "A clean, correctly fitted filter supports engine efficiency and helps avoid avoidable performance issues.",
   },
   {
     title: "VIN",
     image: "/imgi_16_951ac5b75bbb40a68f4a794f285c2a32_ful-1.webp",
+    href: "/appointment",
     text: "We confirm the vehicle identification number is present, readable, and consistent with the vehicle.",
     red: true,
   },
@@ -299,14 +314,14 @@ export default function MotPage() {
           </div>
           <div className="mt-10 grid gap-7 md:grid-cols-3">
             {checklistImages.map((item) => (
-              <article key={item.title} className="overflow-hidden bg-white shadow-sm">
+              <Link key={item.title} href={item.href} className="group overflow-hidden bg-white shadow-sm">
                 <div className="relative h-64">
-                  <Image src={item.image} alt={item.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+                  <Image src={item.image} alt={item.title} fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
                 <div className="border-t-4 border-red-600 p-6">
                   <h3 className="text-2xl font-black">{item.title}</h3>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
@@ -316,15 +331,15 @@ export default function MotPage() {
         <div className="mx-auto max-w-[1860px]">
           <div className="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
             {testAreas.map((item) => (
-              <article key={item.title} className={`overflow-hidden ${item.red ? "bg-red-600 text-white" : "bg-black text-white"}`}>
+              <Link key={item.title} href={item.href} className={`group overflow-hidden ${item.red ? "bg-red-600 text-white" : "bg-black text-white"}`}>
                 <div className="relative h-64">
-                  <Image src={item.image} alt={item.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+                  <Image src={item.image} alt={item.title} fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
                 <div className="p-7">
                   <h3 className="text-2xl font-black sm:text-3xl">{item.title}</h3>
                   <p className="mt-4 text-base font-medium leading-8 text-white/90">{item.text}</p>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
